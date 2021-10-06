@@ -83,8 +83,6 @@
 .cart {
     grid-area: cart;
     justify-self: end;
-
-    justify-content: space-between;
 }
 
 
