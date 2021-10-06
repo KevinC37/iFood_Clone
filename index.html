@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,412 +9,622 @@
     <link rel="stylesheet" href="styles/body_of_website.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/copyright.css" />
-
+    <link rel="stylesheet" href="styles/cart.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!------------------------------------------------------------>
     <!-----------------------HEAD--------------------------------->
     <!------------------------------------------------------------>
     <div class="top_of_the_page">
-    <div class="header_container">
-
+      <div class="header_container">
         <img class="logo" src="icons/logo.svg" alt="iFood" />
 
         <!-- <div id="parent_empty">
             <span id="empty_space"></span>
         </div> -->
         <div class="header_elements">
+          <div class="search_bar">
+            <input
+              class="search_box"
+              type="text"
+              placeholder="Caută restaurante"
+            />
+            <label class="search_icon" for="search_box">
+              <img class="" src="icons/search.svg" alt="Search" />
+            </label>
+          </div>
+          <div class="address_pointer">
+            <div class="address">
+              <label class="location_icon" for="address">
+                <img src="icons/location.svg" alt="    " />
+              </label>
+              <span class="user_address"> strada Păcii 10 </span>
+            </div>
+          </div>
+          <div class="language_pointer">
+            <div class="language">
+              <label for="language"> RO </label>
+            </div>
+          </div>
+          <div class="user_pointer">
+            <div class="user_profile">
+              <img src="icons/profile-icon.svg" alt="" />
 
-            <div class="search_bar">
-                <input class="search_box" type="text" placeholder="Caută restaurante" />
-                <label class="search_icon" for="search_box">
-                    <img class="" src="icons/search.svg" alt="Search" />
-                </label>
+              <span class="user_name" class="user_name"> Mihai </span>
             </div>
-            <div class="address_pointer">
-                <div class="address">
-                    <label class="location_icon" for="address">
-                        <img src="icons/location.svg" alt="    " />
-                    </label>
-                    <span class="user_address"> strada Păcii 10 </span>
-                </div>
-            </div>
-            <div class="language_pointer">
-                <div class="language">
-                    <label for="language"> RO </label>
-                </div>
-            </div>
-            <div class="user_pointer">
-                <div class="user_profile">
-                    <img src="icons/profile-icon.svg" alt="" />
+          </div>
 
-                    <span class="user_name" class="user_name"> Mihai </span>
-                </div>
-            </div>
-
-            <div class="cart">
-                <button>
-                    <img src="icons/cart-green1.svg" alt="" />
-                    <span>135 MDL</span>
-                </button>
-            </div>
+          <div id="cart_button" class="cart">
+            <button>
+              <img src="icons/cart-green1.svg" alt="" />
+              <span id="cart_button_price">135 MDL</span>
+            </button>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-
 
     <!------------------------------------------------------------>
     <!-----------------------BODY--------------------------------->
     <!------------------------------------------------------------>
 
     <div class="information_about_restaurant">
-        <div class="banner"
-            style="background-image: linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 100%), url(backgrounds/mcdonaldsbackground.webp)">
-            <div class="restaurant_presentation">
-                <div class="restaurant_name">
-                    <h3>McDonald's</h3>
-                </div>
-                <div class="restaurant_description">
-                    <p>
-                        Restaurantele McDonald's oferă produse 100% proaspete şi de
-                        calitate în orice loc şi în orice moment
-                    </p>
-                </div>
-            </div>
+      <div
+        class="banner"
+        style="
+          background-image: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0) 0,
+              rgba(0, 0, 0, 0.8) 100%
+            ),
+            url(backgrounds/mcdonaldsbackground.webp);
+        "
+      >
+        <div class="restaurant_presentation">
+          <div class="restaurant_name">
+            <h3>McDonald's</h3>
+          </div>
+          <div class="restaurant_description">
+            <p>
+              Restaurantele McDonald's oferă produse 100% proaspete şi de
+              calitate în orice loc şi în orice moment
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="additional_information">
+        <!---PRICE FOR SHIPPING-->
+        <div class="shipping">
+          <span>Prețul livrării: 29 MDL</span>
+        </div>
+        <!---RESTAURANT SCHEDULE--->
+        <div class="schedule">
+          <span class="work_day">Marți</span>
+          <span class="work_hours">10:00 - 22:00</span>
+        </div>
+        <!----CARD PAYMENT METHOD--->
+        <div class="payment_method_card">
+          <img src="icons/credit-card.svg" alt="Card" />
+          <span>Card</span>
+        </div>
+        <!----CASH PAYMENT METHOD--->
+        <div class="payment_method_cash">
+          <img src="icons/cash.svg" alt="Cash" />
+          <span>Cash</span>
         </div>
 
-        <div class="additional_information">
-            <!---PRICE FOR SHIPPING-->
-            <div class="shipping">
-                <span>Prețul livrării: 29 MDL</span>
-            </div>
-            <!---RESTAURANT SCHEDULE--->
-            <div class="schedule">
-                <span class="work_day">Marți</span>
-                <span class="work_hours">10:00 - 22:00</span>
-            </div>
-            <!----CARD PAYMENT METHOD--->
-            <div class="payment_method_card">
-                <img src="icons/credit-card.svg" alt="Card" />
-                <span>Card</span>
-            </div>
-            <!----CASH PAYMENT METHOD--->
-            <div class="payment_method_cash">
-                <img src="icons/cash.svg" alt="Cash" />
-                <span>Cash</span>
-            </div>
+        <!----RESTAURANT LOCATION--->
+        <div class="resturant_location">
+          <img src="icons/restaurant-page-location.svg" alt="" />
+          <span>Vezi pe hartă</span>
+        </div>
+      </div>
 
-            <!----RESTAURANT LOCATION--->
-            <div class="resturant_location">
-                <img src="icons/restaurant-page-location.svg" alt="" />
-                <span>Vezi pe hartă</span>
+      <!--Main body div start-->
+      <div class="main_body">
+        <!------SPECIAL OFFER BANNER(S)-->
+        <div class="special_offer_container">
+          <div class="banner_promo">
+            <img src="icons/mastercard-banner-icon.svg" alt="" />
+            <div class="promo_info">
+              <span class="promo_title">livrare gratuită</span>
+              <span class="promo_description"
+                >Achită cu Mastercard de la 200 lei și primește livrare
+                gratuită</span
+              >
             </div>
+          </div>
         </div>
 
-        <!--Main body div start-->
-        <div class="main_body">
-            <!------SPECIAL OFFER BANNER(S)-->
-            <div class="special_offer_container">
-                <div class="banner_promo">
-                    <img src="icons/mastercard-banner-icon.svg" alt="" />
-                    <div class="promo_info">
-                        <span class="promo_title">livrare gratuită</span>
-                        <span class="promo_description">Achită cu Mastercard de la 200 lei și primește livrare
-                            gratuită</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-----CATEGORIES FILTER------->
-            <div class="categories_container">
-                <button class="category all">Toate</button>
-                <button class="category">Noutăți</button>
-                <button class="category">Creveți</button>
-                <button class="category">Happy Meal</button>
-                <button class="category">Sandwich-uri</button>
-                <button class="category">Wrap</button>
-                <button class="category">Cartofi Prăjiți</button>
-                <button class="category">Pui</button>
-                <button class="category">Salate</button>
-                <button class="category">Deserturi</button>
-                <button class="category">Sosuri</button>
-                <button class="category">Băuturi</button>
-            </div>
-
-            <div class="food_items_container">
-                <!----------FOOD ITEM CARD---------->
-                <div class="food_items_card_template">
-                    <div class="food_image" style="background-image: url(food_images/creveti_4_buc.webp)"></div>
-
-                    <div class="food_description_tile">
-                        <span class="food_name">McToast</span>
-                        <span class="food_description">Două felii de brânză Emmentaler, o felie de șuncă Toast,
-                            așezate într-o chiflă, caramelizată, fierbinte</span>
-                        <span class="food_weight">94 g.</span>
-                    </div>
-
-                    <div class="food_tile_counter_container">
-                        <button class="food_tile_counter_minus">
-                            <img src="icons/minus.svg" alt="" />
-                        </button>
-                        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1"
-                            max="10" value="1" readonly />
-                        <button class="food_tile_counter_plus">
-                            <img src="icons/plus.svg" alt="" />
-                        </button>
-                        <button class="add_item_to_cart">
-                            <span>Adaugă</span>
-                            <span>350 L</span>
-                        </button>
-                    </div>
-                </div>
-                <!----------END OF FOOD ITEM CARD---------->
-
-                <!----------FOOD ITEM CARD---------->
-                <div class="food_items_card_template">
-                    <div class="food_image" style="background-image: url(food_images/creveti_4_buc.webp)"></div>
-
-                    <div class="food_description_tile">
-                        <span class="food_name">McToast</span>
-                        <span class="food_description">Două felii de brânză Emmentaler, o felie de șuncă Toast,
-                            așezate într-o chiflă, caramelizată, fierbinte</span>
-                        <span class="food_weight">94 g.</span>
-                    </div>
-
-                    <div class="food_tile_counter_container">
-                        <button class="food_tile_counter_minus">
-                            <img src="icons/minus.svg" alt="" />
-                        </button>
-                        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1"
-                            max="10" value="1" readonly />
-                        <button class="food_tile_counter_plus">
-                            <img src=icons/plus.svg" alt="" />
-                        </button>
-                        <button class="add_item_to_cart">
-                            <span>Adaugă</span>
-                            <span>350 L</span>
-                        </button>
-                    </div>
-                </div>
-                <!----------END OF FOOD ITEM CARD---------->
-
-                <!----------FOOD ITEM CARD---------->
-                <div class="food_items_card_template">
-                    <div class="food_image" style="background-image: url(food_images/creveti_4_buc.webp)"></div>
-
-                    <div class="food_description_tile">
-                        <span class="food_name">McToast</span>
-                        <span class="food_description">Două felii de brânză Emmentaler, o felie de șuncă Toast,
-                            așezate într-o chiflă, caramelizată, fierbinte</span>
-                        <span class="food_weight">94 g.</span>
-                    </div>
-
-                    <div class="food_tile_counter_container">
-                        <button class="food_tile_counter_minus">
-                            <img src="icons/minus.svg" alt="" />
-                        </button>
-                        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1"
-                            max="10" value="1" readonly />
-                        <button class="food_tile_counter_plus">
-                            <img src="icons/plus.svg" alt="" />
-                        </button>
-                        <button class="add_item_to_cart">
-                            <span>Adaugă</span>
-                            <span>350 L</span>
-                        </button>
-                    </div>
-                </div>
-                <!----------END OF FOOD ITEM CARD---------->
-                <!----------FOOD ITEM CARD---------->
-                <div class="food_items_card_template">
-                    <div class="food_image" style="background-image: url(food_images/creveti_4_buc.webp)"></div>
-
-                    <div class="food_description_tile">
-                        <span class="food_name">McToast</span>
-                        <span class="food_description">Două felii de brânză Emmentaler, o felie de șuncă Toast,
-                            așezate într-o chiflă, caramelizată, fierbinte</span>
-                        <span class="food_weight">94 g.</span>
-                    </div>
-
-                    <div class="food_tile_counter_container">
-                        <button class="food_tile_counter_minus">
-                            <img src=icons/minus.svg" alt="" />
-                        </button>
-                        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1"
-                            max="10" value="1" readonly />
-                        <button class="food_tile_counter_plus">
-                            <img src="icons/plus.svg" alt="" />
-                        </button>
-                        <button class="add_item_to_cart">
-                            <span>Adaugă</span>
-                            <span>350 L</span>
-                        </button>
-                    </div>
-                </div>
-                <!----------END OF FOOD ITEM CARD---------->
-                <!----------FOOD ITEM CARD---------->
-                <div class="food_items_card_template">
-                    <div class="food_image" style="background-image: url(food_images/creveti_4_buc.webp)"></div>
-
-                    <div class="food_description_tile">
-                        <span class="food_name">McToast</span>
-                        <span class="food_description">Două felii de brânză Emmentaler, o felie de șuncă Toast,
-                            așezate într-o chiflă, caramelizată, fierbinte</span>
-                        <span class="food_weight">94 g.</span>
-                    </div>
-
-                    <div class="food_tile_counter_container">
-                        <button class="food_tile_counter_minus">
-                            <img src="icons/minus.svg" alt="" />
-                        </button>
-                        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1"
-                            max="10" value="1" readonly />
-                        <button class="food_tile_counter_plus">
-                            <img src="icons/plus.svg" alt="" />
-                        </button>
-                        <button class="add_item_to_cart">
-                            <span>Adaugă</span>
-                            <span>350 L</span>
-                        </button>
-                    </div>
-                </div>
-                <!----------END OF FOOD ITEM CARD---------->
-                <!----------FOOD ITEM CARD---------->
-                <div class="food_items_card_template">
-                    <div class="food_image" style="background-image: url(food_images/creveti_4_buc.webp)"></div>
-
-                    <div class="food_description_tile">
-                        <span class="food_name">McToast</span>
-                        <span class="food_description">Două felii de brânză Emmentaler, o felie de șuncă Toast,
-                            așezate într-o chiflă, caramelizată, fierbinte</span>
-                        <span class="food_weight">94 g.</span>
-                    </div>
-
-                    <div class="food_tile_counter_container">
-                        <button class="food_tile_counter_minus">
-                            <img src=icons/minus.svg" alt="" />
-                        </button>
-                        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1"
-                            max="10" value="1" readonly />
-                        <button class="food_tile_counter_plus">
-                            <img src="icons/plus.svg" alt="" />
-                        </button>
-                        <button class="add_item_to_cart">
-                            <span>Adaugă</span>
-                            <span>350 L</span>
-                        </button>
-                    </div>
-                </div>
-                <!----------END OF FOOD ITEM CARD---------->
-
-
-            </div>
-        </div>
-        <!--Main body div close-->
-
-
-        <!-------------------------------------------------------------->
-        <!-----------------------FOOTER START--------------------------->
-        <!-------------------------------------------------------------->
-
-        <div class="footer_main">
-
-            <!----------FOOTER CONTAINER--------------->
-            <div class="footer_container">
-                <!---------FOOTER ROW START--------->
-                <div class="footer_row">
-                    <span class="footer_row_title">Ajutor</span>
-                    <a class="footer_row_links" href="#">Livrare</a>
-
-                    <span class="footer_row_title">Powered By</span>
-
-                    <div class="sponsors">
-                        <img id="iticket_logo_sponsors" src=sponsors/i_ticket.svg" alt="iTicket">
-                        <img id="fusionWorks_logo_sponsors" src="sponsors/fusion_works_2.svg" alt="Fusion Works">
-                    </div>
-                </div>
-                <!---------FOOTER ROW END--------->
-
-                <!---------FOOTER ROW START--------->
-                <div class="footer_row">
-                    <span class="footer_row_title">iFood</span>
-                    <a class="footer_row_links" href="#">Livrare</a>
-
-                    <a class="footer_row_links" href="#">Despre noi</a>
-                    <a class="footer_row_links" href="#">Devino curier</a>
-                    <a class="footer_row_links" href="#">Devino partener</a>
-                    <a class="footer_row_links" href="#">Promo Mastercard</a>
-
-                </div>
-                <!---------FOOTER ROW END--------->
-
-                <!---------FOOTER ROW START--------->
-                <div class="footer_row">
-                    <span class="footer_row_title">Juridic</span>
-
-                    <a class="footer_row_links" href="#">Termeni și condiții</a>
-                    <a class="footer_row_links" href="#">Politica de confidențialitate</a>
-                    <a class="footer_row_links" href="#">Politica Cookies</a>
-
-
-                </div>
-                <!---------FOOTER ROW END--------->
-
-                <!---------FOOTER ROW START--------->
-                <div class="footer_row">
-                    <span class="footer_row_title">Suport</span>
-
-                    <a class="footer_row_links" href="#">Telefon:
-                        <span>(022) 000 100</span>
-                    </a>
-                    <a class="footer_row_links" href="#">Email:
-                        <span>support@ifood.md</span>
-                    </a>
-
-                    <div class="footer_row_links">
-                        <a href="#"><img src="social_media/PlayMarket.svg" alt=""></a>
-                        <a href="#"><img src="social_media/AppStore.svg" alt=""></a>
-                    </div>
-
-                    <span class="footer_row_title">Abonează-te</span>
-                    <div class="footer_row_links social_media">
-                        <a href="#"><img src="social_media/facebook.svg" alt=""></a>
-                        <a href="#"><img src="social_media/instagram.svg" alt=""></a>
-                        <a href="#"><img src="social_media/youtube.svg" alt=""></a>
-                    </div>
-
-                </div>
-                <!---------FOOTER ROW END--------->
-
-            </div>
-
+        <!-----CATEGORIES FILTER------->
+        <div class="categories_container">
+          <button class="category all">Toate</button>
+          <button class="category">Noutăți</button>
+          <button class="category">Creveți</button>
+          <button class="category">Happy Meal</button>
+          <button class="category">Sandwich-uri</button>
+          <button class="category">Wrap</button>
+          <button class="category">Cartofi Prăjiți</button>
+          <button class="category">Pui</button>
+          <button class="category">Salate</button>
+          <button class="category">Deserturi</button>
+          <button class="category">Sosuri</button>
+          <button class="category">Băuturi</button>
         </div>
 
-        <!-------------------------------------------------------------->
-        <!-----------------------COPYRIGHT--------------------------->
-        <!-------------------------------------------------------------->
-        <div class="copyright_main">
-            <div class="copyright_container">
-                <span>© 2021 iFood. Toate drepturile sunt rezervate.</span>
+        <div class="food_items_container">
+          <!----------FOOD ITEM CARD---------->
+          <div class="food_items_card_template">
+            <div
+              class="food_image"
+              style="background-image: url(food_images/creveti_4_buc.webp)"
+            ></div>
 
-                <div class="credit_card_issuers">
-                    <img src="credit_card_issuers/mastercard_secure_code.svg" alt="">
-                    <img src="credit_card_issuers/mastercard.webp" alt="">
-                    <img src="credit_card_issuers/verified_by_visa.svg" alt="">
-                    <img src="credit_card_issuers/visa.svg" alt="">
-                </div>
+            <div class="food_description_tile">
+              <span class="food_name">McToast</span>
+              <span class="food_description"
+                >Două felii de brânză Emmentaler, o felie de șuncă Toast,
+                așezate într-o chiflă, caramelizată, fierbinte</span
+              >
+              <span class="food_weight">94 g.</span>
             </div>
+
+            <div class="food_tile_counter_container">
+              <button class="food_tile_counter_minus">
+                <img src="icons/minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                class="food_tile_counter"
+                name="food_tile_counter"
+                step="1"
+                min="1"
+                max="10"
+                value="1"
+                readonly
+              />
+              <button class="food_tile_counter_plus">
+                <img src="icons/plus.svg" alt="" />
+              </button>
+              <button class="add_item_to_cart">
+                <span>Adaugă</span>
+                <span>350 L</span>
+              </button>
+            </div>
+          </div>
+          <!----------END OF FOOD ITEM CARD---------->
+
+          <!----------FOOD ITEM CARD---------->
+          <div class="food_items_card_template">
+            <div
+              class="food_image"
+              style="background-image: url(food_images/creveti_4_buc.webp)"
+            ></div>
+
+            <div class="food_description_tile">
+              <span class="food_name">McToast</span>
+              <span class="food_description"
+                >Două felii de brânză Emmentaler, o felie de șuncă Toast,
+                așezate într-o chiflă, caramelizată, fierbinte</span
+              >
+              <span class="food_weight">94 g.</span>
+            </div>
+
+            <div class="food_tile_counter_container">
+              <button class="food_tile_counter_minus">
+                <img src="icons/minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                class="food_tile_counter"
+                name="food_tile_counter"
+                step="1"
+                min="1"
+                max="10"
+                value="1"
+                readonly
+              />
+              <button class="food_tile_counter_plus">
+                <img src="icons/plus.svg" alt="" />
+              </button>
+              <button class="add_item_to_cart">
+                <span>Adaugă</span>
+                <span>350 L</span>
+              </button>
+            </div>
+          </div>
+          <!----------END OF FOOD ITEM CARD---------->
+
+          <!----------FOOD ITEM CARD---------->
+          <div class="food_items_card_template">
+            <div
+              class="food_image"
+              style="background-image: url(food_images/creveti_4_buc.webp)"
+            ></div>
+
+            <div class="food_description_tile">
+              <span class="food_name">McToast</span>
+              <span class="food_description"
+                >Două felii de brânză Emmentaler, o felie de șuncă Toast,
+                așezate într-o chiflă, caramelizată, fierbinte</span
+              >
+              <span class="food_weight">94 g.</span>
+            </div>
+
+            <div class="food_tile_counter_container">
+              <button class="food_tile_counter_minus">
+                <img src="icons/minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                class="food_tile_counter"
+                name="food_tile_counter"
+                step="1"
+                min="1"
+                max="10"
+                value="1"
+                readonly
+              />
+              <button class="food_tile_counter_plus">
+                <img src="icons/plus.svg" alt="" />
+              </button>
+              <button class="add_item_to_cart">
+                <span>Adaugă</span>
+                <span>350 L</span>
+              </button>
+            </div>
+          </div>
+          <!----------END OF FOOD ITEM CARD---------->
+          <!----------FOOD ITEM CARD---------->
+          <div class="food_items_card_template">
+            <div
+              class="food_image"
+              style="background-image: url(food_images/creveti_4_buc.webp)"
+            ></div>
+
+            <div class="food_description_tile">
+              <span class="food_name">McToast</span>
+              <span class="food_description"
+                >Două felii de brânză Emmentaler, o felie de șuncă Toast,
+                așezate într-o chiflă, caramelizată, fierbinte</span
+              >
+              <span class="food_weight">94 g.</span>
+            </div>
+
+            <div class="food_tile_counter_container">
+              <button class="food_tile_counter_minus">
+                <img src="icons/minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                class="food_tile_counter"
+                name="food_tile_counter"
+                step="1"
+                min="1"
+                max="10"
+                value="1"
+                readonly
+              />
+              <button class="food_tile_counter_plus">
+                <img src="icons/plus.svg" alt="" />
+              </button>
+              <button class="add_item_to_cart">
+                <span>Adaugă</span>
+                <span>350 L</span>
+              </button>
+            </div>
+          </div>
+          <!----------END OF FOOD ITEM CARD---------->
+          <!----------FOOD ITEM CARD---------->
+          <div class="food_items_card_template">
+            <div
+              class="food_image"
+              style="background-image: url(food_images/creveti_4_buc.webp)"
+            ></div>
+
+            <div class="food_description_tile">
+              <span class="food_name">McToast</span>
+              <span class="food_description"
+                >Două felii de brânză Emmentaler, o felie de șuncă Toast,
+                așezate într-o chiflă, caramelizată, fierbinte</span
+              >
+              <span class="food_weight">94 g.</span>
+            </div>
+
+            <div class="food_tile_counter_container">
+              <button class="food_tile_counter_minus">
+                <img src="icons/minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                class="food_tile_counter"
+                name="food_tile_counter"
+                step="1"
+                min="1"
+                max="10"
+                value="1"
+                readonly
+              />
+              <button class="food_tile_counter_plus">
+                <img src="icons/plus.svg" alt="" />
+              </button>
+              <button class="add_item_to_cart">
+                <span>Adaugă</span>
+                <span>350 L</span>
+              </button>
+            </div>
+          </div>
+          <!----------END OF FOOD ITEM CARD---------->
+          <!----------FOOD ITEM CARD---------->
+          <div class="food_items_card_template">
+            <div
+              class="food_image"
+              style="background-image: url(food_images/creveti_4_buc.webp)"
+            ></div>
+
+            <div class="food_description_tile">
+              <span class="food_name">McToast</span>
+              <span class="food_description"
+                >Două felii de brânză Emmentaler, o felie de șuncă Toast,
+                așezate într-o chiflă, caramelizată, fierbinte</span
+              >
+              <span class="food_weight">94 g.</span>
+            </div>
+
+            <div class="food_tile_counter_container">
+              <button class="food_tile_counter_minus">
+                <img src="icons/minus.svg" alt="" />
+              </button>
+              <input
+                type="number"
+                class="food_tile_counter"
+                name="food_tile_counter"
+                step="1"
+                min="1"
+                max="10"
+                value="1"
+                readonly
+              />
+              <button class="food_tile_counter_plus">
+                <img src="icons/plus.svg" alt="" />
+              </button>
+              <button class="add_item_to_cart">
+                <span>Adaugă</span>
+                <span>350 L</span>
+              </button>
+            </div>
+          </div>
+          <!----------END OF FOOD ITEM CARD---------->
         </div>
+      </div>
+      <!--Main body div close-->
 
+      <!-------------------------------------------------------------->
+      <!-----------------------FOOTER START--------------------------->
+      <!-------------------------------------------------------------->
 
+      <div class="footer_main">
+        <!----------FOOTER CONTAINER--------------->
+        <div class="footer_container">
+          <!---------FOOTER ROW START--------->
+          <div class="footer_row">
+            <span class="footer_row_title">Ajutor</span>
+            <a class="footer_row_links" href="#">Livrare</a>
+
+            <span class="footer_row_title">Powered By</span>
+
+            <div class="sponsors">
+              <img id="iticket_logo_sponsors" src="sponsors/i_ticket.svg"
+              alt="iTicket">
+              <img
+                id="fusionWorks_logo_sponsors"
+                src="sponsors/fusion_works_2.svg"
+                alt="Fusion Works"
+              />
+            </div>
+          </div>
+          <!---------FOOTER ROW END--------->
+
+          <!---------FOOTER ROW START--------->
+          <div class="footer_row">
+            <span class="footer_row_title">iFood</span>
+            <a class="footer_row_links" href="#">Livrare</a>
+
+            <a class="footer_row_links" href="#">Despre noi</a>
+            <a class="footer_row_links" href="#">Devino curier</a>
+            <a class="footer_row_links" href="#">Devino partener</a>
+            <a class="footer_row_links" href="#">Promo Mastercard</a>
+          </div>
+          <!---------FOOTER ROW END--------->
+
+          <!---------FOOTER ROW START--------->
+          <div class="footer_row">
+            <span class="footer_row_title">Juridic</span>
+
+            <a class="footer_row_links" href="#">Termeni și condiții</a>
+            <a class="footer_row_links" href="#"
+              >Politica de confidențialitate</a
+            >
+            <a class="footer_row_links" href="#">Politica Cookies</a>
+          </div>
+          <!---------FOOTER ROW END--------->
+
+          <!---------FOOTER ROW START--------->
+          <div class="footer_row">
+            <span class="footer_row_title">Suport</span>
+
+            <a class="footer_row_links" href="#"
+              >Telefon:
+              <span>(022) 000 100</span>
+            </a>
+            <a class="footer_row_links" href="#"
+              >Email:
+              <span>support@ifood.md</span>
+            </a>
+
+            <div class="footer_row_links">
+              <a href="#"><img src="social_media/PlayMarket.svg" alt="" /></a>
+              <a href="#"><img src="social_media/AppStore.svg" alt="" /></a>
+            </div>
+
+            <span class="footer_row_title">Abonează-te</span>
+            <div class="footer_row_links social_media">
+              <a href="#"><img src="social_media/facebook.svg" alt="" /></a>
+              <a href="#"><img src="social_media/instagram.svg" alt="" /></a>
+              <a href="#"><img src="social_media/youtube.svg" alt="" /></a>
+            </div>
+          </div>
+          <!---------FOOTER ROW END--------->
+        </div>
+      </div>
+
+      <!-------------------------------------------------------------->
+      <!-----------------------COPYRIGHT--------------------------->
+      <!-------------------------------------------------------------->
+      <div class="copyright_main">
+        <div class="copyright_container">
+          <span>© 2021 iFood. Toate drepturile sunt rezervate.</span>
+
+          <div class="credit_card_issuers">
+            <img src="credit_card_issuers/mastercard_secure_code.svg" alt="" />
+            <img src="credit_card_issuers/mastercard.webp" alt="" />
+            <img src="credit_card_issuers/verified_by_visa.svg" alt="" />
+            <img src="credit_card_issuers/visa.svg" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
 
+
+      <!-------------------------------------------------------------->
+      <!-----------------------CART MODAL----------------------------->
+      <!-------------------------------------------------------------->
+
+
+    <div id="cart_modal" style="display: none;" class="body_container">
+      <div class="cart_modal_container">
+        <div class="cart_modal_header">
+          <span>Coșul meu</span>
+          <div id="close_modal" class="close_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill="#E8EDF6"
+                fill-rule="evenodd"
+                d="M11.446 10l7.847 7.847c.39.39.386 1.028 0 1.413l-.033.034a.998.998 0 0 1-1.414-.001L10 11.446l-7.847 7.847c-.39.39-1.028.386-1.413 0l-.034-.033a.998.998 0 0 1 .001-1.413L8.553 10 .707 2.153a1.004 1.004 0 0 1 0-1.413L.74.706a.998.998 0 0 1 1.413.001L10 8.554 17.846.707a1.004 1.004 0 0 1 1.414 0l.033.033a.997.997 0 0 1 0 1.413L11.446 10z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div id="all_cart_tems" class="cart_modal_scroll_body">
+          <!----------------------------ITEM HTML START---------------------->
+          <div class="cart_modal_item_list_template">
+            <div class="cart_modal_item_info_container">
+              <div class="cart_modal_item_info">
+                <span class="cart_modal_item_count">1</span>
+                <sup>x</sup>
+                <span class="cart_modal_item_name">Creveți 8 buc.</span>
+              </div>
+              <span class="cart_modal_item_price">115,00 MDL</span>
+            </div>
+
+            <div class="cart_modal_edit_delete">
+              <button class="cart_modal_edit">Editează</button>
+              <button class="cart_modal_delete">Șterge</button>
+            </div>
+          </div>
+          <!----------------------------ITEM HTML END------------------------>
+
+          <!----------------------------ITEM HTML START---------------------->
+          <div class="cart_modal_item_list_template">
+            <div class="cart_modal_item_info_container">
+              <div class="cart_modal_item_info">
+                <span class="cart_modal_item_count">1</span>
+                <sup>x</sup>
+                <span class="cart_modal_item_name">Frunze de caine</span>
+              </div>
+              <span class="cart_modal_item_price">115,00 MDL</span>
+            </div>
+
+            <div class="cart_modal_edit_delete">
+              <button class="cart_modal_edit">Editează</button>
+              <button class="cart_modal_delete">Șterge</button>
+            </div>
+          </div>
+          <!----------------------------ITEM HTML END------------------------>
+
+          <!----------------------------ITEM HTML START---------------------->
+          <div class="cart_modal_item_list_template">
+            <div class="cart_modal_item_info_container">
+              <div class="cart_modal_item_info">
+                <span class="cart_modal_item_count">1</span>
+                <sup>x</sup>
+                <span class="cart_modal_item_name">Salcie</span>
+              </div>
+              <span class="cart_modal_item_price">115,00 MDL</span>
+            </div>
+
+            <div class="cart_modal_edit_delete">
+              <button class="cart_modal_edit">Editează</button>
+              <button class="cart_modal_delete">Șterge</button>
+            </div>
+          </div>
+          <!----------------------------ITEM HTML END------------------------>
+
+          <!----------------------------ITEM HTML START---------------------->
+          <div class="cart_modal_item_list_template">
+            <div class="cart_modal_item_info_container">
+              <div class="cart_modal_item_info">
+                <span class="cart_modal_item_count">1</span>
+                <sup>x</sup>
+                <span class="cart_modal_item_name">Buruian la vaci</span>
+              </div>
+              <span class="cart_modal_item_price">115,00 MDL</span>
+            </div>
+
+            <div class="cart_modal_edit_delete">
+              <button class="cart_modal_edit">Editează</button>
+              <button class="cart_modal_delete">Șterge</button>
+            </div>
+          </div>
+          <!----------------------------ITEM HTML END------------------------>
+        </div>
+
+        <div class="cart_modal_footer">
+          <!--------------------------------------->
+          <div class="cart_modal_totals">
+            <span id="cart_modal_delivery_name">Livrare:</span>
+            <span id="cart_modal_delivery_price">29,00 MDL</span>
+          </div>
+
+          <!--------------------------------------->
+          <div class="cart_modal_totals">
+            <span id="cart_modal_total_name">Total: </span>
+            <span id="cart_modal_total_price">144,00 MDL</span>
+          </div>
+
+          <div class="checkout_button_container">
+            <button id="continue_to_checkout">Continuă</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/cart.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
