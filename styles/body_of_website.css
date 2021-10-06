@@ -18,6 +18,7 @@
 .banner{
     width: 100vw;
     max-width: 100%;
+    margin-top: 91px;
     height: 200px;
     background-repeat: no-repeat;
 }
