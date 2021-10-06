@@ -83,6 +83,8 @@
 .cart {
     grid-area: cart;
     justify-self: end;
+
+    justify-content: space-between;
 }
 
 
@@ -205,7 +207,7 @@
     height: 50px;
     padding: 0 43px 0 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
    
@@ -256,7 +258,7 @@
     outline: 0;
     border: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     font-size: 16px;
