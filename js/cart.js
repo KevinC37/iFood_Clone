@@ -72,7 +72,7 @@ let removeItemFromCart = () => {
 }
 }
 
-//Calculates the total for items in cart
+//Calculates the total for items in cart and applies changes to the cart total and cart modal total
 let calculateTotal = () => {
     let currentTotal = 0;
 
