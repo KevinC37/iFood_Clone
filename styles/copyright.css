@@ -4,6 +4,8 @@
     height: 24px;
 
     padding: 30px 0;
+
+    scrollbar-width: none;
 }
 
 .copyright_container {
@@ -29,3 +31,5 @@
     margin-left: 30px;
     
 }
+
+
