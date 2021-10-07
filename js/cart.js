@@ -38,8 +38,8 @@ let displayToggle = (element) => {
 
 
 
-//Removes item from the cart for which the "delete" button has been clicked
 let removeItemFromCart = () => {
+//Removes item from the cart for which the "delete" button has been clicked
     for (let key in Object.entries(delete_item_modal)) {
         //Click event for remove food item from cart
         delete_item_modal[key].addEventListener("click", (e) => {
@@ -51,6 +51,7 @@ let removeItemFromCart = () => {
                     //recalculate total
                     calculateTotal();
 
+                    //Controls the style of the cart (empty vs has items in it)
                     if (item_list_modal.length === 0) {
                         cart_button.style.background = "#fafafa";
                         totalOnCartButton.style.color = "#555555"
