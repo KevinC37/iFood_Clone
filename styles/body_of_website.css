@@ -331,6 +331,8 @@
     margin-top: 16px;
     cursor: default;
     font-weight: 400;
+
+    min-height: 36px;
 }
 
 .food_weight {
