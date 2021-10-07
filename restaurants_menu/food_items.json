@@ -1,0 +1,69 @@
+{
+    "1": {
+        "name": "Coleslaw",
+        "description": "Varză albă, maioneză, morcov, ceapă, zahăr, ulei vegetal de floarea-soarelui, oțet.",
+        "weight": "170 g.",
+        "price": "25",
+        "category": "Salate"
+    },
+    "2": {
+        "name": "2 buc. Pui Kentucky®",
+        "description": "",
+        "weight": "160 g.",
+        "price": "45",
+        "category": "Pui"
+    },
+    "3": {
+        "name": "5 Hot Wings®",
+        "description": "*produs picant",
+        "weight": "240 g.",
+        "price": "60",
+        "category": "Pui"
+    },
+    "4": {
+        "name": "8 Hot Wings®",
+        "description": "*produs picant",
+        "weight": "240 g.",
+        "price": "78",
+        "category": "Pui"
+    },
+    "5": {
+        "name": "6 Fillet Bites®",
+        "description": "piept de pui nepicant",
+        "weight": "105 g.",
+        "price": "60",
+        "category": "Pui"
+    },
+    "6": {
+        "name": "9 Fillet Bites®",
+        "description": "piept de pui nepicant",
+        "weight": "155 g.",
+        "price": "78",
+        "category": "Pui"
+    },
+    "7": {
+        "name": "5 Crispy Strips®",
+        "description": "piept de pui picant 150g, (cu sos inclus 58g)",
+        "weight": "150/58 g.",
+        "price": "70",
+        "category": "Pui"
+    },
+    "8": {
+        "name": "8 Crispy Strips®",
+        "description": "piept de pui picant 240g, (cu sos inclus 58g)",
+        "weight": "240/58 g.",
+        "price": "85",
+        "category": "Pui"
+    }
+    ,
+    "123": {
+        "name": "",
+        "description": "",
+        "weight": "",
+        "price": "",
+        "category": ""
+    }
+}
+
+
+

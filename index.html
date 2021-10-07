@@ -19,7 +19,7 @@
     />
   </head>
 
-  <body>
+  <body onload="loadRestaurantMenu()">
     <!------------------------------------------------------------>
     <!-----------------------HEAD--------------------------------->
     <!------------------------------------------------------------>
@@ -161,7 +161,7 @@
           <button class="category">Băuturi</button>
         </div>
 
-        <div class="food_items_container">
+        <div id="food_items_container" class="food_items_container">
           <!----------FOOD ITEM CARD---------->
           <div class="food_items_card_template">
             <div
@@ -625,8 +625,9 @@
       </div>
       </div>
     </div>
-    <script src="js/cart.js"></script>
 
+    <script src="js/parse_restaurant_menu.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
