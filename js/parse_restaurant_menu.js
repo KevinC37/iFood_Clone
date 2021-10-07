@@ -4,7 +4,7 @@ let menuArray = []
 fetch('restaurants_menu/mcdonalds.json')
         .then(response => response.json())
         .then(data => menuArray.push(data))
-        .then(() => {
+        .then(function loadRestaurantMenu() {
 
             new Promise(resolve => {
       
