@@ -53,10 +53,6 @@ let removeItemFromCart = () => {
 
                     //Controls the style of the cart (empty vs has items in it)
                     if (item_list_modal.length === 0) {
-                        cart_button.style.background = "#fafafa";
-                        totalOnCartButton.style.color = "#555555"
-                        totalOnCartButton.style.fontWeight = "600";
-                        cart_icon.setAttribute("src", "icons/cart_grey.svg")
 
                         cart_modal.innerHTML = `
                     <div class="cart_modal_container">
@@ -85,7 +81,11 @@ let removeItemFromCart = () => {
                     </div>
                     
                     </div>`
-
+                    
+                    cart_button.style.background = "#fafafa";
+                    totalOnCartButton.style.color = "#555555"
+                    totalOnCartButton.style.fontWeight = "600";
+                    cart_icon.setAttribute("src", "icons/cart_grey.svg")
 
                     } else {
                         cart_button.style.background = "#e1f5eb";
