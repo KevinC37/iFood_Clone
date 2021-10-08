@@ -1,7 +1,9 @@
+import {loadScript} from "./load_scripts.js"
+
 function addItemToHTML(htmlContainer, menuItem) {
 
     htmlContainer.innerHTML +=
-    `<!----------FOOD ITEM CARD---------->
+        `<!----------FOOD ITEM CARD---------->
     <div class="food_items_card_template">
     <div class="food_image" style="background-image: url(${menuItem.backgroundImage})"></div>
 
@@ -30,25 +32,32 @@ function addItemToHTML(htmlContainer, menuItem) {
 
 }
 
+//path to the main js file with functions for interacting with menu items
+let scriptPath = "js/script.js";
 
+export async function pushRestaurantMenuToHTML(restaurantMenu) {
 
-export function pushRestaurantMenuToHTML(restaurantMenu) {
+    new Promise(async function (resolve, reject) {
 
-    let food_items_container = document.getElementById("food_items_container");
+        (() => {
+            let food_items_container = document.getElementById("food_items_container");
 
+            for (let itemIndex in Object.keys(restaurantMenu)) {
 
-    for (let itemIndex in Object.keys(restaurantMenu)) {
+                for (let obj of Object.entries(restaurantMenu)) {
 
-        for (let obj of Object.entries(restaurantMenu)) {
+                    if (obj[itemIndex] && typeof obj[itemIndex] === 'object') {
 
-            if (obj[itemIndex] && typeof obj[itemIndex] === 'object') {
+                        addItemToHTML(food_items_container, obj[itemIndex]);
 
-                addItemToHTML(food_items_container, obj[itemIndex]);
+                    }
 
+                }
             }
+        })()
 
-        }
-    }
+    }).finally(
+      loadScript(scriptPath)
+    );
 
 }
-
