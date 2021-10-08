@@ -5,3 +5,5 @@ export function loadScript(src) {
     script.src = src;
     document.head.append(script);
 }
+
+export let script_js_path = "js/script.js";

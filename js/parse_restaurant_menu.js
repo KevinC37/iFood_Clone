@@ -1,4 +1,4 @@
-import {loadScript} from "./load_scripts.js"
+import {loadScript, script_js_path} from "./load_scripts.js"
 
 function addItemToHTML(htmlContainer, menuItem) {
 
@@ -32,8 +32,6 @@ function addItemToHTML(htmlContainer, menuItem) {
 
 }
 
-//path to the main js file with functions for interacting with menu items
-let scriptPath = "js/script.js";
 
 export async function pushRestaurantMenuToHTML(restaurantMenu) {
 
@@ -48,6 +46,7 @@ export async function pushRestaurantMenuToHTML(restaurantMenu) {
 
                     if (obj[itemIndex] && typeof obj[itemIndex] === 'object') {
 
+                        //pushes the menu items to html
                         addItemToHTML(food_items_container, obj[itemIndex]);
 
                     }
@@ -57,7 +56,10 @@ export async function pushRestaurantMenuToHTML(restaurantMenu) {
         })()
 
     }).finally(
-      loadScript(scriptPath)
+    
+      //once all menu items have been pushed, load the script that manages interaction
+      //with the menu items in HTML
+      loadScript(script_js_path)
     );
 
 }
