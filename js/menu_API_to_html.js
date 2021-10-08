@@ -1,10 +1,10 @@
-import {loadRestaurantMenu} from "./parse_restaurant_menu.js";
+import {pushRestaurantMenuToHTML} from "./parse_restaurant_menu.js";
 
-(async function parseFetchedRestaurantMenu() {
-    let menuArray = []
+(async function fetchAndPushMenuToHTML() {
 
-    await fetch('restaurants_menu/mcdonalds.json')
-        .then(response => response.json())
-        .then(data => menuArray.push(data))
-        loadRestaurantMenu(menuArray)
+    let response = await fetch('restaurants_menu/mcdonalds.json')
+    let restaurantMenu = await response.json()
+
+    pushRestaurantMenuToHTML(restaurantMenu);
+
 })();
