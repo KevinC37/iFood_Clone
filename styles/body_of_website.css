@@ -404,6 +404,7 @@
     border: none;
     border-radius: 8px;
 
+    cursor: pointer;
     background-color: #19ac4b;
 }
 

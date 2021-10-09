@@ -268,7 +268,7 @@
 
     <div id="cart_modal" style="display: none;" class="body_container">
       <div class="cart_modal_container">
-        <div class="cart_modal_header">
+        <div id="cart_modal_header" class="cart_modal_header">
           <span>Coșul meu</span>
           <div id="close_modal" class="close_icon">
             <svg
@@ -287,81 +287,11 @@
         </div>
 
         <div id="cart_modal_body">
-        <div id="all_cart_tems" class="cart_modal_scroll_body">
-          <!----------------------------ITEM HTML START---------------------->
-          <div class="cart_modal_item_list_template">
-            <div class="cart_modal_item_info_container">
-              <div class="cart_modal_item_info">
-                <span class="cart_modal_item_count">1</span>
-                <sup>x</sup>
-                <span class="cart_modal_item_name">Creveți 8 buc.</span>
-              </div>
-              <span class="cart_modal_item_price">115,00 MDL</span>
-            </div>
+        <div id="all_cart_items" class="cart_modal_scroll_body">
 
-            <div class="cart_modal_edit_delete">
-              <button class="cart_modal_edit">Editează</button>
-              <button class="cart_modal_delete">Șterge</button>
-            </div>
-          </div>
-          <!----------------------------ITEM HTML END------------------------>
-
-          <!----------------------------ITEM HTML START---------------------->
-          <div class="cart_modal_item_list_template">
-            <div class="cart_modal_item_info_container">
-              <div class="cart_modal_item_info">
-                <span class="cart_modal_item_count">1</span>
-                <sup>x</sup>
-                <span class="cart_modal_item_name">Frunze de caine</span>
-              </div>
-              <span class="cart_modal_item_price">115,00 MDL</span>
-            </div>
-
-            <div class="cart_modal_edit_delete">
-              <button class="cart_modal_edit">Editează</button>
-              <button class="cart_modal_delete">Șterge</button>
-            </div>
-          </div>
-          <!----------------------------ITEM HTML END------------------------>
-
-          <!----------------------------ITEM HTML START---------------------->
-          <div class="cart_modal_item_list_template">
-            <div class="cart_modal_item_info_container">
-              <div class="cart_modal_item_info">
-                <span class="cart_modal_item_count">1</span>
-                <sup>x</sup>
-                <span class="cart_modal_item_name">Salcie</span>
-              </div>
-              <span class="cart_modal_item_price">115,00 MDL</span>
-            </div>
-
-            <div class="cart_modal_edit_delete">
-              <button class="cart_modal_edit">Editează</button>
-              <button class="cart_modal_delete">Șterge</button>
-            </div>
-          </div>
-          <!----------------------------ITEM HTML END------------------------>
-
-          <!----------------------------ITEM HTML START---------------------->
-          <div class="cart_modal_item_list_template">
-            <div class="cart_modal_item_info_container">
-              <div class="cart_modal_item_info">
-                <span class="cart_modal_item_count">1</span>
-                <sup>x</sup>
-                <span class="cart_modal_item_name">Buruian la vaci</span>
-              </div>
-              <span class="cart_modal_item_price">115,00 MDL</span>
-            </div>
-
-            <div class="cart_modal_edit_delete">
-              <button class="cart_modal_edit">Editează</button>
-              <button class="cart_modal_delete">Șterge</button>
-            </div>
-          </div>
-          <!----------------------------ITEM HTML END------------------------>
         </div>
 
-        <div class="cart_modal_footer">
+        <div id="cart_modal_footer" class="cart_modal_footer">
           <!--------------------------------------->
           <div class="cart_modal_totals">
             <span id="cart_modal_delivery_name">Livrare:</span>
@@ -383,8 +313,9 @@
     </div>
 
 
+    <script type="module" src="js/creatNewCartItem.js"></script>
     <script type="module" src="js/parse_restaurant_menu.js"></script>
-    <script id="loadMenu" type="module" src="js/menu_API_to_html.js"></script>
-    <script type="text/javascript" src="js/cart.js"></script>
+    <script  type="module" src="js/menu_API_to_html.js"></script>
+    <script type="module" src="js/cart.js"></script>
   </body>
 </html>
