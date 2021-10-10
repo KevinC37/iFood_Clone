@@ -144,9 +144,7 @@ export class itemComponent extends HTMLElement {
     }
 
 
-    calculateTotal_OnRemove() {
-        
-    }
+
 
 
 
