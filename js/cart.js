@@ -1,8 +1,3 @@
-import {creatNewCartItem} from "./creatNewCartItem.js"; //pushes the menu item to cart
-import {emptyCart} from "./components/cart_item_components.js";
-import {menuItemList} from "./menu_API_to_html.js"; //fetched menu items;
-
-
 //Variables for toggling the cart
 let cart_button = document.getElementById("cart_button");
 let cart_modal = document.getElementById("cart_modal");
@@ -23,6 +18,7 @@ let displayToggle = (element) => {
         document.body.style.position = "fixed";
 
     } else {
+        element.classList.add("close");
         element.style.display = "none";
         document.body.style.position = "relative";
 
@@ -78,4 +74,4 @@ let calculateTotal = () => {
 
 //Calling functions
 toggleModalOnClick();
-window.onload = calculateTotal();
+calculateTotal();

@@ -98,13 +98,35 @@
     background: #e1f5eb;
 }
 
+#cart_button.cart_is_empty {
+    background: #fafafa;
+    transition: background .15s;
+}
+
+#cart_button.cart_is_empty:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+#cart_button.cart_is_empty > * {
+    font-weight: 400;
+    color: #000000;
+    background: transparent;
+}
+
+#cart_button.cart_is_empty #cart_icon {
+    background-image: url(../icons/cart_grey.svg);
+}
 
 .header_container svg {
     cursor: pointer;
 }
 
-#cart_icon path {
-    fill: #19ac4b;
+#cart_icon{
+    background-image: url(../icons/cart-green1.svg);
+    width: 24px;
+    height: 24px;
+
 }
 
 

@@ -81,10 +81,48 @@ export class itemComponent extends HTMLElement {
             r.addEventListener("click", this.removeItem.bind(this));
         }
 
+        //input to be updated in DOM
+        let cartButtonTotal = document.getElementById("cart_button_price");
+        let cartModalTotal = document.getElementById("cart_modal_total_price");
+        let item_list_modal = document.getElementsByTagName("cart-item-component");
+        let cartButton = document.getElementById("cart_button");
+        
+
+        
+        //Calculations
+        let deliveryCost = Number(document.getElementById("cart_modal_delivery_price").innerHTML.replace(/ MDL|,00 MDL/gi, ""));
+        let itemPrice = Number(this.menuItem.price) * Number(this.count);
+
+        (function calculateTotal_On_Add() {
+            if(item_list_modal.length === 0) {
+                cartButtonTotal.innerHTML = "Coș gol"
+                cartButton.classList.add("cart_is_empty");
+
+            } else if(item_list_modal.length === 1) {
+                cartButtonTotal.innerHTML = itemPrice + deliveryCost + " MDL";
+                cartModalTotal.innerHTML = cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,",00 MDL")
+                cartButton.classList.remove("cart_is_empty");
+
+            } else {
+                cartButtonTotal.innerHTML = Number(cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,"")) + itemPrice + " MDL";
+                cartModalTotal.innerHTML = cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,",00 MDL")
+            }
+        })();
+        
+
     }   
 
     removeItem() {
         this.remove();
+        let cartButton = document.getElementById("cart_button");
+
+        //input to be updated in DOM
+        let cartButtonTotal = document.getElementById("cart_button_price");
+        let cartModalTotal = document.getElementById("cart_modal_total_price");
+   
+                
+        //Calculations
+        let itemPrice = Number(this.menuItem.price) * Number(this.count);
 
         let item_list_modal = document.getElementsByTagName("cart-item-component");
         let cart_footer = document.getElementById("cart_modal_footer");
@@ -95,9 +133,19 @@ export class itemComponent extends HTMLElement {
             cart_body.appendChild(new emptyCart());
             cart_footer.style.display = "none";
             cart_modal_items.style.display = "none";
+            cartButtonTotal.innerHTML = "Coș gol"
+            cartButton.classList.add("cart_is_empty");
+        } else {
+            cartButtonTotal.innerHTML = Number(cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,"")) - itemPrice + " MDL";
+            cartModalTotal.innerHTML = cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,",00 MDL")
         }
 
    
+    }
+
+
+    calculateTotal_OnRemove() {
+        
     }
 
 
@@ -188,7 +236,7 @@ export class itemComponent extends HTMLElement {
                             <sup>x</sup>
                             <span class="cart_modal_item_name">${this.menuItem.name}</span>
                         </div>
-                        <span class="cart_modal_item_price">${this.menuItem.price},00 MDL</span>
+                        <span class="cart_modal_item_price">${this.menuItem.price * this.count},00 MDL</span>
                     </div>
         
                     <div class="cart_modal_edit_delete">

@@ -32,6 +32,22 @@
     background-color: rgba(144,147,153,.5) !important;
 }
 
+@keyframes cart-popup {
+    0% {transform: translateX(-50%) scale(0.5)}
+    100% {transform: translate(0, 0) scale(1)}
+}
+
+@keyframes cart-close {
+    0% {transform: translate(0, 0) scale(1)}
+    100% {transform: translateX(-50%) scale(0.5); display: none}
+}
+
+.cart_modal_container.close {
+    animation-name: cart-close;
+    animation-duration: .25s;
+    transition-timing-function: ease-in-out;
+}
+
 .cart_modal_container {
 
     width: 355px;
@@ -41,7 +57,10 @@
 
     background-color: white;
     box-shadow: 0 4px 36px rgba(64, 85, 128, .08);
-    animation: .25s ease-in-out cart-popup;
+    animation-name: cart-popup;
+    animation-duration: .25s;
+    transition-timing-function: ease-in-out;
+
 
     border-radius: 8px;
 

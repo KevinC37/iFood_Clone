@@ -28,8 +28,7 @@ export function pushRestaurantMenuToHTML(restaurantMenu) {
 
         //once all menu items have been pushed, load the script that manages interaction
         //with the menu items in HTML
-        loadScript(script_js_path),
-        loadScript(cart_js_path)
+        loadScript(script_js_path)
     );
 
 }

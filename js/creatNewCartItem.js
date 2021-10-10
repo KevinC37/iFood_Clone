@@ -6,3 +6,4 @@ export function creatNewCartItem(HTMLContainer, menuItem, count) {
 
     HTMLContainer.appendChild(newItem);
 }
+

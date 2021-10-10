@@ -61,17 +61,22 @@ for (let index in Object.keys(addButtons)) {
 
 let cart_footer = document.getElementById("cart_modal_footer");
 let cart_body = document.getElementById("cart_modal_body");
+let cartButton = document.getElementById("cart_button");
+
 
 (function emptyTheCart() {
   cart_body.appendChild(new emptyCart());
   cart_footer.style.display = "none";
   cart_modal_items.style.display = "none";
+  cartButton.classList.add("cart_is_empty");
+
 })();
 
  function cartNotEmpty() {
   for(let empty_cart_element of Object.values(empty_cart)) {
 
     empty_cart_element.remove();
+    cartButton.classList.remove("cart_is_empty");
 
   }
   cart_modal_items.style.display = "flex";
