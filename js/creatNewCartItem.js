@@ -20,17 +20,21 @@ export async function creatNewCartItem(HTMLContainer, menuItem, count) {
         let buttonPrice = document.getElementById("cart_button_price");
         let modalPrice = document.getElementById("cart_modal_total_price");
         let deliveryCost = document.getElementById("cart_modal_delivery_price").innerHTML.replace(/,00 MDL/gi, "");
+        let total = 0;
 
         for (let k of Object.values(menuItemsCart)) {
-            buttonPrice.innerHTML = Number(k.count) * Number(k.menuItem.price) + Number(deliveryCost) + " MDL";
-            modalPrice.innerHTML = Number(k.count) * Number(k.menuItem.price) + Number(deliveryCost) + ",00 MDL";
+            
+            total += Number(k.count) * Number(k.menuItem.price) ;
+            
+
+            buttonPrice.innerHTML = total + Number(deliveryCost) + " MDL";
+            modalPrice.innerHTML = total + Number(deliveryCost) + ",00 MDL";
 
         }
     }
 
 
 
-    updateTotalPrice();
 
 
     for (let i = 0; i < Object.values(menuItemsCart).length; i++) {
