@@ -493,9 +493,9 @@ export class editCart extends HTMLElement {
   
         <div class="edit_modal_footer">
           <div id="food_count_container">
-            <button id="decrement"><img src="/icons/minus.svg" alt=""></button>
+            <button id="decrement"><img src="icons/minus.svg" alt=""></button>
             <span id="count">${this.count}</span>
-            <button id="increment"><img src="/icons/plus.svg" alt=""></button>
+            <button id="increment"><img src="icons/plus.svg" alt=""></button>
           </div>
   
           <button id="finish_edit_button">
