@@ -19,17 +19,16 @@ export async function creatNewCartItem(HTMLContainer, menuItem, count) {
     function updateTotalPrice() {
         let buttonPrice = document.getElementById("cart_button_price");
         let modalPrice = document.getElementById("cart_modal_total_price");
-        let deliveryCost = document.getElementById("cart_modal_delivery_price").innerHTML.replace(/,00 MDL/gi,"");
-        
-        for(let k of Object.values(menuItemsCart)) {
+        let deliveryCost = document.getElementById("cart_modal_delivery_price").innerHTML.replace(/,00 MDL/gi, "");
+
+        for (let k of Object.values(menuItemsCart)) {
             buttonPrice.innerHTML = Number(k.count) * Number(k.menuItem.price) + Number(deliveryCost) + " MDL";
             modalPrice.innerHTML = Number(k.count) * Number(k.menuItem.price) + Number(deliveryCost) + ",00 MDL";
-        
+
         }
-    
-      
-    
     }
+
+
 
     updateTotalPrice();
 
@@ -52,19 +51,48 @@ export async function creatNewCartItem(HTMLContainer, menuItem, count) {
             let finishEditBtn = edit.shadow.getElementById("finish_edit_button");
             let editModalBody = document.getElementsByTagName("cart-item-component-edit");
 
-            let modalPrice = document.getElementById("cart_modal_total_price");
+            let editModalBackground = editModalBody[0].shadow.children[1];
+            let closeEditModalBtn = editModalBody[0].shadow.children[1].children[0].children[1].children[0].children[1];
 
+
+            (function toggleModal() {
+                //closes edit modal when user clicks on close icon
+                closeEditModalBtn.addEventListener("click", () => {
+                    for (let k of Object.values(editModalBody)) {
+                        k.remove();
+                    }
+                })
+
+                //closes edit modal when user clicks on background
+                editModalBackground.addEventListener("click", (e) => {
+                    if (e.target === editModalBackground) {
+                        for (let k of Object.values(editModalBody)) {
+                            k.remove();
+                        }
+                    }
+
+                })
+
+            })();
+
+            //updates the pricing and closes edit modal when user clicks on add item to cart
             finishEditBtn.addEventListener("click", () => {
-               menuItemsCart[i].count = currentCount.innerHTML;
-               menuItemsCart[i].shadow.children[1].children[0].children[0].children[0].innerHTML = currentCount.innerHTML;
-               menuItemsCart[i].shadow.children[1].children[0].children[0].nextElementSibling.innerHTML = updatePrice().replace(/ L/gi,",00 MDL");
-               updateTotalPrice();
-               for(let k of Object.values(editModalBody)) {
-                   k.remove();
-               }
+                menuItemsCart[i].count = currentCount.innerHTML;
+                //update count for edited item
+                menuItemsCart[i].shadow.children[1].children[0].children[0].children[0].innerHTML = currentCount.innerHTML;
+
+                //update total price for edited item
+                menuItemsCart[i].shadow.children[1].children[0].children[0].nextElementSibling.innerHTML = updatePrice().replace(/ L/gi, ",00 MDL");
+
+
+
+                updateTotalPrice();
+                for (let k of Object.values(editModalBody)) {
+                    k.remove();
+                }
             })
 
-           
+
 
 
             function updatePrice() {
@@ -117,5 +145,3 @@ export function itemAddedPopupWindow(HTMLContainer, menuItem, count) {
         popup.remove();
     }, 4000);
 }
-
-
