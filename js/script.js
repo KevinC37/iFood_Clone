@@ -42,7 +42,7 @@ let addButtons = document.getElementsByClassName("add_item_to_cart");
 let cart_modal_items = document.getElementById("all_cart_items");
 let empty_cart = document.getElementsByTagName("empty-cart");
 let cartButton = document.getElementById("cart_button");
-let header_container = document.getElementsByClassName("header_container")[0];
+
 
 for (let index in Object.keys(addButtons)) {
   addButtons[index].addEventListener("click", () => {
@@ -51,6 +51,7 @@ for (let index in Object.keys(addButtons)) {
     cartNotEmpty();
     //pushes menu item to cart with count specified by user
     creatNewCartItem(cart_modal_items, itemToAdd, food_tile_counter[index].value ); 
+    //adds the popup when an item is added (timeout 4 seconds)
     itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].value );
   })
 }
@@ -85,3 +86,14 @@ let cart_body = document.getElementById("cart_modal_body");
   cart_modal_items.style.display = "flex";
   cart_footer.style.display = "";
 }
+
+(function calculateTotal() {
+        let deliveryCost = Number(document.getElementById("cart_modal_delivery_price").innerHTML.replace(/ MDL|,00 MDL/gi, ""));
+        let cartButtonTotal = document.getElementById("cart_button_price");
+        let cartModalTotal = document.getElementById("cart_modal_total_price");
+        let item_list_modal = document.getElementsByTagName("cart-item-component");
+
+
+
+
+})();

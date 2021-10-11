@@ -74,6 +74,7 @@ export class itemComponent extends HTMLElement {
 
     connectedCallback() {
         this.render();
+      
         let removeButton = this.shadow.querySelectorAll(".cart_modal_delete");
         let editButton = this.shadow.querySelectorAll(".cart_modal_edit");
 
@@ -91,24 +92,28 @@ export class itemComponent extends HTMLElement {
         
         //Calculations
         let deliveryCost = Number(document.getElementById("cart_modal_delivery_price").innerHTML.replace(/ MDL|,00 MDL/gi, ""));
-        let itemPrice = Number(this.menuItem.price) * Number(this.count);
 
-        (function calculateTotal_On_Add() {
+
+        (function calculateTotal() {
+            let total = 0;
+            for(let k of Object.values(item_list_modal)) {
+                total += k.menuItem.price * k.count;
+                cartButtonTotal.innerHTML = total + deliveryCost + " MDL";
+                cartModalTotal.innerHTML = total + deliveryCost + ",00 MDL"
+            }
+        })();
+
+        (function emptyCart() {
             if(item_list_modal.length === 0) {
                 cartButtonTotal.innerHTML = "Coș gol"
                 cartButton.classList.add("cart_is_empty");
 
-            } else if(item_list_modal.length === 1) {
-                cartButtonTotal.innerHTML = itemPrice + deliveryCost + " MDL";
-                cartModalTotal.innerHTML = cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,",00 MDL")
-                cartButton.classList.remove("cart_is_empty");
-
-            } else {
-                cartButtonTotal.innerHTML = Number(cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,"")) + itemPrice + " MDL";
-                cartModalTotal.innerHTML = cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,",00 MDL")
-            }
+            } 
         })();
+
         
+
+
 
     }   
 
@@ -120,6 +125,7 @@ export class itemComponent extends HTMLElement {
         let cartButtonTotal = document.getElementById("cart_button_price");
         let cartModalTotal = document.getElementById("cart_modal_total_price");
    
+        let deliveryCost = Number(document.getElementById("cart_modal_delivery_price").innerHTML.replace(/ MDL|,00 MDL/gi, ""));
                 
         //Calculations
         let itemPrice = Number(this.menuItem.price) * Number(this.count);
@@ -129,26 +135,87 @@ export class itemComponent extends HTMLElement {
         let cart_body = document.getElementById("cart_modal_body");
         let cart_modal_items = document.getElementById("all_cart_items");
 
+
+    
+
         if(item_list_modal.length === 0) {
             cart_body.appendChild(new emptyCart());
             cart_footer.style.display = "none";
             cart_modal_items.style.display = "none";
             cartButtonTotal.innerHTML = "Coș gol"
             cartButton.classList.add("cart_is_empty");
-        } else {
-            cartButtonTotal.innerHTML = Number(cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,"")) - itemPrice + " MDL";
-            cartModalTotal.innerHTML = cartButtonTotal.innerHTML.replace(/Coș gol| MDL/gi,",00 MDL")
-        }
+       } 
 
+       (function calculateTotal() {
+        let total = 0;
+        for(let k of Object.values(item_list_modal)) {
+            total += k.menuItem.price * k.count;
+            cartButtonTotal.innerHTML = total + deliveryCost + " MDL";
+            cartModalTotal.innerHTML = total + deliveryCost + ",00 MDL"
+
+        }
+    })();
+       
    
     }
 
 
-
-
+   
 
 
     render() {
+
+
+        
+            let item_list_modal = document.getElementsByTagName("cart-item-component");
+            let counter = 1;
+     
+            for(let k in Object.entries(item_list_modal)) {
+                if(item_list_modal[k].menuItem === this.menuItem) {
+                   
+                   counter++;
+                }
+                let item = this.menuItem;
+                let arr = [];
+                if(counter > 2) {
+                
+                Object.keys(item_list_modal).map((key) => {
+                      if(item_list_modal[key].menuItem == item) {
+                        arr.push(item_list_modal[key]);
+    
+                      }
+                    
+                   })
+                   item_list_modal[k].remove();
+                   let previousCount = arr.pop().count;
+                   let cart_component_objects = Object.values(document.getElementsByTagName("cart-item-component"));
+    
+                   for(let k of Object.entries(cart_component_objects).map(e => e)) {
+                       if (k[1] === arr[0]) {
+                        
+                        let originalCount = cart_component_objects[k[0]].shadow.children[1].children[0].firstElementChild.children[0];
+                        let newCount = Number(originalCount.innerHTML) + Number(previousCount);
+                        k[1].count = newCount;   
+    
+                        let newPrice = Number(cart_component_objects[k[0]].count) * Number(cart_component_objects[k[0]].menuItem.price);
+                        let itemPriceUpdate = cart_component_objects[k[0]].shadow.children[1].children[0].firstElementChild.nextElementSibling.firstChild.data = newPrice + ",00 MDL";
+                        
+                        originalCount.innerHTML = newCount;
+    
+    
+                       }
+                   };
+      
+                  
+    
+                } 
+                
+            }
+        
+     
+
+
+
         this.shadow.innerHTML = `<style>
         
         .cart_modal_item_list_template {
