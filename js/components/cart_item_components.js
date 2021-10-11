@@ -1,3 +1,4 @@
+
 export class emptyCart extends HTMLElement {
     constructor() {
         super();
@@ -315,4 +316,7 @@ export class itemComponent extends HTMLElement {
 }
 
 customElements.define("cart-item-component", itemComponent);
+
+
+
 
