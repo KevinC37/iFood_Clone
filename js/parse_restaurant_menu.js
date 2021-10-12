@@ -1,5 +1,6 @@
-import {loadScript, script_js_path, cart_js_path} from "./load_scripts.js"; //function that loads another js file
-import {addItemToHTML} from "./addItemsFunction.js"; //function that += adds items to HTML canvas
+import {loadScript, script_js_path, internationalization_path} from "./load_scripts.js"; //function that loads another js file
+import {menuItemComponent} from "./components/main_menu_component.js";
+
 
 
 export function pushRestaurantMenuToHTML(restaurantMenu) {
@@ -15,8 +16,8 @@ export function pushRestaurantMenuToHTML(restaurantMenu) {
 
                 if (obj[itemIndex] && typeof obj[itemIndex] === 'object') {
 
-                    //pushes the menu items to html using the addItemToHTML() function
-                    addItemToHTML(food_items_container, obj[itemIndex]);
+                    //pushes menu items to html canvas
+                    food_items_container.appendChild(new menuItemComponent(obj[itemIndex]))
 
                 }
 
@@ -28,7 +29,8 @@ export function pushRestaurantMenuToHTML(restaurantMenu) {
 
         //once all menu items have been pushed, load the script that manages interaction
         //with the menu items in HTML
-        loadScript(script_js_path)
+        loadScript(script_js_path),
+        loadScript(internationalization_path)
     );
 
 }

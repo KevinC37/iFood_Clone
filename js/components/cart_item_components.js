@@ -11,6 +11,18 @@ export class emptyCart extends HTMLElement {
 
 
     render() {
+        let heading = "Coșul tău este gol!";
+        let message = "Adaugă produse în coș pentru a continua cumpărăturile."
+
+        if(document.getElementById("vanilla-i18n-toggler").value.toLowerCase() == "ru") {
+            heading = "Ваша корзина пуста!";
+            message = "Добавьте товары в корзину, чтобы продолжить покупки."
+        } else if(document.getElementById("vanilla-i18n-toggler").value.toLowerCase() == "en") {
+            heading = "Your cart is empty!";
+            message = "Add products to cart to continue shopping."
+        }
+
+
         this.shadow.innerHTML = 
 `
 <style>
@@ -48,8 +60,8 @@ export class emptyCart extends HTMLElement {
 
 <div id="empty_cart_container" class="empty_cart_modal_container">
     <img src="icons/empty_cart.svg" alt="">
-    <p class="cart_empty_title">Coșul tău este gol!</p>
-    <p class="empty_cart_message">Adaugă produse în coș pentru a continua cumpărăturile.</p>
+    <p class="cart_empty_title">${heading}</p>
+    <p class="empty_cart_message">${message}</p>
 </div>
 `
     }

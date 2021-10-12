@@ -1,7 +1,9 @@
 {
     "1": {
         "name": "Coleslaw",
-        "description": "Varză albă, maioneză, morcov, ceapă, zahăr, ulei vegetal de floarea-soarelui, oțet.",
+        "description_ro": "Varză albă, maioneză, morcov, ceapă, zahăr, ulei vegetal de floarea-soarelui, oțet.",
+        "description_ru": "Белая капуста, майонез, морковь, лук, сахар, подсолнечное масло, уксус.",
+        "description_en": "White cabbage, mayonnaise, carrot, onion, sugar, sunflower oil, vinegar.",
         "weight": "170 g.",
         "price": "25",
         "category": "Salate",
@@ -9,7 +11,9 @@
     },
     "2": {
         "name": "2 buc. Pui Kentucky®",
-        "description": "",
+        "description_ro": "",
+        "description_ru" : "",
+        "description_en" : "",
         "weight": "160 g.",
         "price": "45",
         "category": "Pui",
@@ -18,7 +22,9 @@
     },
     "3": {
         "name": "5 Hot Wings®",
-        "description": "*produs picant",
+        "description_ro": "*produs picant",
+        "description_ru" : "* Пряный продукт",
+        "description_en" : "* spicy product",
         "weight": "240 g.",
         "price": "60",
         "category": "Pui",
@@ -26,7 +32,9 @@
     },
     "4": {
         "name": "8 Hot Wings®",
-        "description": "*produs picant",
+        "description_ro": "*produs picant",
+        "description_ru" : "* Пряный продукт",
+        "description_en" : "* spicy product",   
         "weight": "240 g.",
         "price": "78",
         "category": "Pui",
@@ -34,7 +42,9 @@
     },
     "5": {
         "name": "6 Fillet Bites®",
-        "description": "piept de pui nepicant",
+        "description_ro": "*produs picant",
+        "description_ru" : "* острый продукт",
+        "description_en" : "* spicy product",
         "weight": "105 g.",
         "price": "60",
         "category": "Pui",
@@ -42,7 +52,9 @@
     },
     "6": {
         "name": "9 Fillet Bites®",
-        "description": "piept de pui nepicant",
+        "description_ro": "piept de pui nepicant",
+        "description_ru" : "не острая куриная грудка",
+        "description_en" : "non-spicy chicken breast",
         "weight": "155 g.",
         "price": "78",
         "category": "Pui",
@@ -50,7 +62,9 @@
     },
     "7": {
         "name": "5 Crispy Strips®",
-        "description": "piept de pui picant 150g, (cu sos inclus 58g)",
+        "description_ro": "piept de pui picant 150g, (cu sos inclus 58g)",
+        "description_ru" : "острая куриная грудка 150г (с соусом 58г)",
+        "description_en" : "spicy chicken breast 150g, (with sauce included 58g)",
         "weight": "150/58 g.",
         "price": "70",
         "category": "Pui",
@@ -58,7 +72,9 @@
     },
     "8": {
         "name": "8 Crispy Strips®",
-        "description": "piept de pui picant 240g, (cu sos inclus 58g)",
+        "description_ro": "piept de pui picant 240g, (cu sos inclus 58g)",
+        "description_ru" : "острая куриная грудка 240г (с соусом 58г)",
+        "description_en" : "spicy chicken breast 240g, (with sauce included 58g)",
         "weight": "240/58 g.",
         "price": "85",
         "category": "Pui",

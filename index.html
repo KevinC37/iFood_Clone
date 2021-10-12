@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,6 +17,26 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://cdn.jsdelivr.net/gh/thealphadollar/vanilla-i18n/src/vanilla-i18n.min.js"></script>
+    <script>
+        const languages = [
+            "Ro",
+            "Ru",
+            "En"
+        ];
+        new vanilla_i18n(
+            languages,
+            opts = {
+                path: "docs/assets/vanilla-i18n",
+                debug: true,
+                i18n_attr_name: "vanilla-i18n",
+                toggler_id: "vanilla-i18n-toggler",
+                default_language: languages[3],
+            }
+        ).run();
+    </script>
+
   </head>
 
   <body>
@@ -29,10 +49,14 @@
 
         <div class="header_elements">
           <div class="search_bar">
+          
+
             <input
+              id="searchbox"
               class="search_box"
               type="text"
-              placeholder="Caută restaurante"
+       
+              placeholder= ""
             />
             <label class="search_icon" for="search_box">
               <img class="" src="icons/search.svg" alt="Search" />
@@ -43,10 +67,18 @@
               <label class="location_icon" for="address">
                 <img src="icons/location.svg" alt="    " />
               </label>
-              <span class="user_address"> strada Păcii 10 </span>
+              <span vanilla-i18n="header.address" class="user_address"> strada Păcii 10 </span>
             </div>
           </div>
-          <div class="language_pointer">
+
+          <select id="vanilla-i18n-toggler" class="language_pointer">
+            <option class="language">Ro</option>
+            <option class="language">Ru</option>
+            <option class="language">En</option>
+        </select>
+
+
+          <div style="display: none;" class="language_pointer">
             <div class="language">
               <label for="language"> RO </label>
             </div>
@@ -90,10 +122,10 @@
             <h3>McDonald's</h3>
           </div>
           <div class="restaurant_description">
-            <p>
-              Restaurantele McDonald's oferă produse 100% proaspete şi de
-              calitate în orice loc şi în orice moment
-            </p>
+      
+              <span vanilla-i18n="restaurant.description">Restaurantele McDonald's oferă produse 100% proaspete şi de
+                calitate în orice loc şi în orice moment</span> 
+        
           </div>
         </div>
       </div>
@@ -101,28 +133,70 @@
       <div class="additional_information">
         <!---PRICE FOR SHIPPING-->
         <div class="shipping">
-          <span>Prețul livrării: 29 MDL</span>
+          <span vanilla-i18n="restaurant.delivery">Prețul livrării: &nbsp;</span>
+          <span> 29 MDL</span>
         </div>
         <!---RESTAURANT SCHEDULE--->
         <div class="schedule">
-          <span class="work_day">Marți</span>
+          <span vanilla-i18n="schedule.wednesday" class="work_day">Miercuri</span>
           <span class="work_hours">10:00 - 22:00</span>
+
+            <!--------------SCHEDULE BOX----------->
+        <div class="schedule_box" style="display: none;">
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.monday">Monday: </span>
+            <span>10:00 - 22:00</span>
+          </div>
+
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.tuesday">Tuesday: </span>
+            <span>10:00 - 22:00</span>
+          </div>
+
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.wednesday">Wednesday: </span>
+            <span>10:00 - 22:00</span>
+          </div>
+
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.thursday">Thursday: </span>
+            <span>10:00 - 22:00</span>
+          </div>
+
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.friday">Friday: </span>
+            <span>10:00 - 22:45</span>
+          </div>
+
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.saturday">Saturday: </span>
+            <span>10:00 - 22:45</span>
+          </div>
+
+          <div class="schedule_box_element">
+            <span vanilla-i18n="schedule.sunday">Sunday: </span>
+            <span>10:00 - 22:45</span>
+          </div>
         </div>
+        </div>
+      
+
+
         <!----CARD PAYMENT METHOD--->
         <div class="payment_method_card">
           <img src="icons/credit-card.svg" alt="Card" />
-          <span>Card</span>
+          <span vanilla-i18n="restaurant.payment.card">Card</span>
         </div>
         <!----CASH PAYMENT METHOD--->
         <div class="payment_method_cash">
           <img src="icons/cash.svg" alt="Cash" />
-          <span>Cash</span>
+          <span vanilla-i18n="restaurant.payment.cash">Cash</span>
         </div>
 
         <!----RESTAURANT LOCATION--->
         <div class="resturant_location">
           <img src="icons/restaurant-page-location.svg" alt="" />
-          <span>Vezi pe hartă</span>
+          <span vanilla-i18n="restaurant.map"  >Vezi pe hartă</span>
         </div>
       </div>
 
@@ -133,8 +207,8 @@
           <div class="banner_promo">
             <img src="icons/mastercard-banner-icon.svg" alt="" />
             <div class="promo_info">
-              <span class="promo_title">livrare gratuită</span>
-              <span class="promo_description"
+              <span vanilla-i18n="promo.title" class="promo_title">livrare gratuită</span>
+              <span vanilla-i18n="promo.description" class="promo_description"
                 >Achită cu Mastercard de la 200 lei și primește livrare
                 gratuită</span
               >
@@ -173,8 +247,8 @@
         <div class="footer_container">
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
-            <span class="footer_row_title">Ajutor</span>
-            <a class="footer_row_links" href="#">Livrare</a>
+            <span vanilla-i18n="help.title" class="footer_row_title">Ajutor</span>
+            <a vanilla-i18n="help.delivery" class="footer_row_links" href="#">Livrare</a>
 
             <span class="footer_row_title">Powered By</span>
 
@@ -193,36 +267,35 @@
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
             <span class="footer_row_title">iFood</span>
-            <a class="footer_row_links" href="#">Livrare</a>
 
-            <a class="footer_row_links" href="#">Despre noi</a>
-            <a class="footer_row_links" href="#">Devino curier</a>
-            <a class="footer_row_links" href="#">Devino partener</a>
-            <a class="footer_row_links" href="#">Promo Mastercard</a>
+            <a vanilla-i18n="ifood.about" class="footer_row_links" href="#">Despre noi</a>
+            <a vanilla-i18n="ifood.become_courier" class="footer_row_links" href="#">Devino curier</a>
+            <a vanilla-i18n="ifood.become_partner" class="footer_row_links" href="#">Devino partener</a>
+            <a  vanilla-i18n="ifood.mastercard_promo" class="footer_row_links" href="#">Promo Mastercard</a>
           </div>
           <!---------FOOTER ROW END--------->
 
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
-            <span class="footer_row_title">Juridic</span>
+            <span vanilla-i18n="legal.title" class="footer_row_title">Juridic</span>
 
-            <a class="footer_row_links" href="#">Termeni și condiții</a>
-            <a class="footer_row_links" href="#"
+            <a vanilla-i18n="legal.terms" class="footer_row_links"  href="#">Termeni și condiții</a>
+            <a  vanilla-i18n="legal.confidentiality" class="footer_row_links" href="#"
               >Politica de confidențialitate</a
             >
-            <a class="footer_row_links" href="#">Politica Cookies</a>
+            <a   vanilla-i18n="legal.cookies" class="footer_row_links" href="#">Politica Cookies</a>
           </div>
           <!---------FOOTER ROW END--------->
 
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
-            <span class="footer_row_title">Suport</span>
+            <span  vanilla-i18n="support.title" class="footer_row_title">Suport</span>
 
-            <a class="footer_row_links" href="#"
+            <a vanilla-i18n="support.phone" class="footer_row_links" href="#"
               >Telefon:
               <span>(022) 000 100</span>
             </a>
-            <a class="footer_row_links" href="#"
+            <a vanilla-i18n="support.email" class="footer_row_links" href="#"
               >Email:
               <span>support@ifood.md</span>
             </a>
@@ -232,7 +305,7 @@
               <a href="#"><img src="social_media/AppStore.svg" alt="" /></a>
             </div>
 
-            <span class="footer_row_title">Abonează-te</span>
+            <span vanilla-i18n="subscribe" class="footer_row_title">Abonează-te</span>
             <div class="footer_row_links social_media">
               <a href="#"><img src="social_media/facebook.svg" alt="" /></a>
               <a href="#"><img src="social_media/instagram.svg" alt="" /></a>
@@ -248,7 +321,7 @@
       <!-------------------------------------------------------------->
       <div class="copyright_main">
         <div class="copyright_container">
-          <span>© 2021 iFood. Toate drepturile sunt rezervate.</span>
+          <span>© 2021 iFood.&nbsp; <span vanilla-i18n="rights_reserved" >Toate drepturile sunt rezervate.</span> </span>
 
           <div class="credit_card_issuers">
             <img src="credit_card_issuers/mastercard_secure_code.svg" alt="" />
@@ -260,7 +333,6 @@
       </div>
     </div>
 
-
       <!-------------------------------------------------------------->
       <!-----------------------CART MODAL----------------------------->
       <!-------------------------------------------------------------->
@@ -269,7 +341,7 @@
     <div id="cart_modal" style="display: none;" class="body_container">
       <div class="cart_modal_container">
         <div id="cart_modal_header" class="cart_modal_header">
-          <span>Coșul meu</span>
+          <span vanilla-i18n="header.cartbutton" >Coșul meu</span>
           <div id="close_modal" class="close_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -294,24 +366,23 @@
         <div id="cart_modal_footer" class="cart_modal_footer">
           <!--------------------------------------->
           <div class="cart_modal_totals">
-            <span id="cart_modal_delivery_name">Livrare:</span>
+            <span vanilla-i18n="cart.delivery"  id="cart_modal_delivery_name">Livrare:</span>
             <span id="cart_modal_delivery_price">29,00 MDL</span>
           </div>
 
           <!--------------------------------------->
           <div class="cart_modal_totals">
-            <span id="cart_modal_total_name">Total: </span>
+            <span vanilla-i18n="cart.total" id="cart_modal_total_name">Total: </span>
             <span id="cart_modal_total_price">144,00 MDL</span>
           </div>
 
           <div class="checkout_button_container">
-            <button id="continue_to_checkout">Continuă</button>
+            <button vanilla-i18n="cart.button_next" id="continue_to_checkout">Continuă</button>
           </div>
         </div>
       </div>
       </div>
     </div>
-
 
     <script type="module" src="js/creatNewCartItem.js"></script>
     <script type="module" src="js/parse_restaurant_menu.js"></script>

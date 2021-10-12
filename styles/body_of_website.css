@@ -72,7 +72,7 @@
 }
 
 .shipping {
-    width: 183px;
+  
     height: 52px;
 
     display: flex;
@@ -83,6 +83,7 @@
     border-radius: 8px;
 
     cursor:default;
+    padding: 0px 20px;
 }
 
 .shipping span {
@@ -105,7 +106,16 @@
     align-items:center;
     justify-content: space-between;
 
+    position: relative;
     cursor: pointer;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .schedule:hover {
@@ -119,7 +129,7 @@
 
 .payment_method_card,
 .payment_method_cash {
-    width: 63px;
+
     height: 52px;
 
     display: flex;
@@ -135,13 +145,15 @@
     cursor:default;
 }
 
-.payment_method_cash {
-    width: 66px;
+.payment_method_card span,
+.payment_method_cash span {
+    margin-left: 10px;
 }
 
 
+
 .resturant_location {
-    width: 115px;
+   
     height: 54px;
 
     display: flex;
@@ -161,6 +173,7 @@
     font-weight: 400;
     color: #000;
     font-size: 14px;
+    padding-left: 5px;
 }
 
 .main_body {
@@ -180,7 +193,7 @@
 }
 
 .banner_promo {
-    width: 388px;
+    width: max-content;
     height: 74px;
 
     padding: 0 16px 0 16px;
@@ -207,6 +220,12 @@
     display: flex;
     flex-direction: column;
 }
+
+.promo_title,
+.promo_description {
+    margin-left: 10px;
+}
+
 
 .promo_title {
     font-weight: 700;
@@ -415,6 +434,59 @@
     cursor: pointer;
     font-weight: 700;
 }
+
+.schedule_box {
+    position: absolute;
+    background: #fff;
+    z-index: 3;
+    width: inherit;
+    top: 56px;
+    right: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    text-transform: capitalize;
+
+    color: #555;
+    cursor: pointer;
+
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 20px 0px 20px;
+
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.schedule_box_element {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 16px 20px;
+
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #555;
+   
+}
+
+.schedule_box_element span {
+    text-align: left;
+}
+
 
 @media only screen and (max-width: 1400px) {
 

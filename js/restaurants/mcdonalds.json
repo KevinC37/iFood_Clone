@@ -1,0 +1,17 @@
+{
+    "name" : "McDonald's",
+    "background-image": "backgrounds/mcdonalds/mcdonaldsbackground.webp",
+    "description_ro": "Restaurantele McDonald's oferă produse 100% proaspete şi de calitate în orice loc şi în orice moment",
+    "description_ru": "Рестораны McDonald's предлагают 100% свежие, высококачественные продукты в любое время и в любом месте",
+    "description_en": "McDonald's restaurants offer 100% fresh, high-quality products anytime, anywhere",
+    "delivery_price": 29,
+    "schedule": {
+        "monday": "10:00 - 22:00",
+        "tuesday": "10:00 - 22:00",
+        "wednesday": "10:00 - 22:00",
+        "thursday": "10:00 - 22:00",
+        "friday": "10:00 - 22:45",
+        "saturday": "10:00 - 22:45",
+        "sunday": "10:00 - 22:45"
+    }
+}

@@ -8,25 +8,32 @@ import {itemAddedPopupWindow} from "./creatNewCartItem.js"
 --------------------THE FUNCTION THAT INCREMENTS/DECREMENTS THE MENU ITEM COUNT-------------------------
 
 -------------------------------------------------------------------------------------------------------*/
-let food_tile_counter_minus = document.getElementsByClassName("food_tile_counter_minus");
-let food_tile_counter_plus = document.getElementsByClassName("food_tile_counter_plus");
-let food_tile_counter = document.getElementsByClassName("food_tile_counter");
+let food_tile_counter = document.getElementsByTagName("menu-item");
+
+//minus button = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[0];
+//count = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[1];
+//plus button = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[2];
+
+
+
 
 (function incrementDecrementFoodTileItem() {
-  for (let index in Object.keys(food_tile_counter_minus)) {
-    food_tile_counter_minus[index].addEventListener("click", (e) => {
-      let currentItemCount = food_tile_counter[index];
+  for (let index in Object.keys(food_tile_counter)) {
+    food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[0].addEventListener("click", (e) => {
+      let currentItemCount = food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1];
 
       currentItemCount.value == 1 ? e.preventDefault() : currentItemCount.value = Number(currentItemCount.value) - 1;
+      food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value = currentItemCount.value;
     })
   }
 
-  for (let index in Object.keys(food_tile_counter_plus)) {
-    food_tile_counter_plus[index].addEventListener("click", (e) => {
-
-      let currentItemCount = food_tile_counter[index];
+  for (let index in Object.keys(food_tile_counter)) {
+    food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[2].addEventListener("click", (e) => {
+      let currentItemCount = food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1];
 
       currentItemCount.value == 10 ? e.preventDefault() : currentItemCount.value = Number(currentItemCount.value) + 1;
+      food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value = currentItemCount.value;
+
     })
   }
 })();
@@ -44,15 +51,18 @@ let empty_cart = document.getElementsByTagName("empty-cart");
 let cartButton = document.getElementById("cart_button");
 
 
-for (let index in Object.keys(addButtons)) {
-  addButtons[index].addEventListener("click", () => {
 
-    let itemToAdd = Object.values(menuItemList)[index];
+
+for (let index in Object.keys(food_tile_counter)) {
+  food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[3].addEventListener("click", () => {
+
+    let itemToAdd = Object.values(food_tile_counter)[index].menuItem;
+
     cartNotEmpty();
     //pushes menu item to cart with count specified by user
-    creatNewCartItem(cart_modal_items, itemToAdd, food_tile_counter[index].value ); 
+    creatNewCartItem(cart_modal_items, itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value ); 
     //adds the popup when an item is added (timeout 4 seconds)
-    itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].value );
+    itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value );
   })
 }
 
@@ -87,13 +97,11 @@ let cart_body = document.getElementById("cart_modal_body");
   cart_footer.style.display = "";
 }
 
-(function calculateTotal() {
-        let deliveryCost = Number(document.getElementById("cart_modal_delivery_price").innerHTML.replace(/ MDL|,00 MDL/gi, ""));
-        let cartButtonTotal = document.getElementById("cart_button_price");
-        let cartModalTotal = document.getElementById("cart_modal_total_price");
-        let item_list_modal = document.getElementsByTagName("cart-item-component");
 
-
-
-
-})();
+document.getElementsByClassName("schedule")[0].addEventListener("click", () => {
+  if(document.getElementsByClassName("schedule_box")[0].style.display == "none") {
+    document.getElementsByClassName("schedule_box")[0].style.display = "flex"
+  } else if(document.getElementsByClassName("schedule_box")[0].style.display == "flex") {
+    document.getElementsByClassName("schedule_box")[0].style.display = "none";
+  }
+})

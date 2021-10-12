@@ -17,6 +17,19 @@ export class editCart extends HTMLElement {
    
 
     render() {
+
+        let itemDescription = this.menuItem.description_ro;
+        let addBtnText = "Adaugă";
+        if(document.getElementById("vanilla-i18n-toggler").value.toLowerCase() == "ru") {
+            addBtnText = "Добавить";
+            itemDescription = this.menuItem.description_ru;
+        } else if(document.getElementById("vanilla-i18n-toggler").value.toLowerCase() == "en") {
+            addBtnText = "Add";
+            itemDescription = this.menuItem.description_en;
+        }
+
+        console.log(`Item description: ${itemDescription}`)
+
         this.shadow.innerHTML = ` 
         <style>
         * {
@@ -483,7 +496,7 @@ export class editCart extends HTMLElement {
             <div class="description_container">
               <span class="description"
                
-              > ${this.menuItem.description}</span>
+              > ${itemDescription}</span>
             </div>
               <div class="form_container">
                 
@@ -499,7 +512,7 @@ export class editCart extends HTMLElement {
           </div>
   
           <button id="finish_edit_button">
-            <span>Adaugă</span>
+            <span>${addBtnText}</span>
             <span id="edit_modal_total_price">${this.menuItem.price * this.count} L</span>
           </button>
   

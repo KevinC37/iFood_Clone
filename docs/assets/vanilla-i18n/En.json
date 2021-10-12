@@ -1,0 +1,73 @@
+{
+    "language": "En",
+    "header": {
+        "address": "Pacii 10, street",
+        "cartbutton": "My cart"
+    },
+    "searchbar": {
+        "placeholder" :"Find restaurants"
+    },
+    "addbutton": "Add",
+    "emptycart": {
+        "button": "Empty cart",
+        "modal": {
+            "title": "Your cart is empty!",
+            "additems": "Add products to cart to continue shopping."
+        }
+    },
+    "restaurant": {
+        "delivery": "Delivery price:&nbsp;",
+        "payment": {
+            "card": "Card",
+            "cash": "Cash"
+        },
+        "map": "See on map",
+        "description": "McDonald's restaurants offer 100% fresh, high-quality products anytime, anywhere"
+    },
+    "cart": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "delivery": "Delivery: ",
+        "total": "Total: ",
+        "button_next": "Place order"
+    },
+
+        "help": {
+            "title": "Help",
+            "delivery": "Delivery"
+        },
+        "ifood": {
+            "about": "About Us",
+            "become_courier": "Become a courier",
+            "become_partner": "Become a partner",
+            "mastercard_promo": "Promo MasterCard"
+        },
+        "legal": {
+            "title": "Legal information",
+            "terms": "Terms of use",
+            "confidentiality": "Privacy policy",
+            "cookies": "Cookies policy"
+        },
+        "support": {
+            "title": "Support",
+            "phone": "Telephone:&nbsp;(022) 000 100",
+            "email": "Email:&nbsp;support@ifood.md"
+        },
+        "subscribe": "Subscribe",
+        "rights_reserved": "All rights reserved.",
+        "schedule": {
+            "monday": "Monday:&nbsp",
+            "tuesday": "Tuesday:&nbsp",
+            "wednesday": "Wednesday:&nbsp",
+            "thursday": "Thursday:&nbsp",
+            "friday": "Friday:&nbsp",
+            "saturday": "Saturday:&nbsp",
+            "sunday": "Sunday:&nbsp"
+        },
+        "promo": {
+            "title": "free delivery",
+            "description": "Pay with Mastercard from 200 lei and get free delivery"
+        }
+
+
+}

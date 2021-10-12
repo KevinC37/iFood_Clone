@@ -1,5 +1,7 @@
 export let script_js_path = "js/script.js";
 export let cart_js_path = "js/cart.js"
+export let internationalization_path = "js/internationalization.js"
+
 export function loadScript(src) {
     // creates a <script> tag and append it to the page
     // this causes the script with given src to start loading and run when complete
