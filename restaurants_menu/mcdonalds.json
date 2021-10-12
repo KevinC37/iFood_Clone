@@ -194,16 +194,55 @@
 
     },
     "16": {
-        "name": "Spicy chicken wings 8 pcs.",
-        "description_ro": "Aripioare de pui, acoperite uniform într-un înveliș pané crocant (produs picant)",
-        "description_ru" : "Куриные крылышки, равномерно покрытые хрустящей панировкой (острый продукт)",
-        "description_en" : "Chicken wings, evenly covered in a crispy pané coating (spicy product)",
-        "weight": "250 g.",
+        "name": "Primavera salad",
+        "description_ro": "Amestec savuros de salate, castraveți și roșii Cherry",
+        "description_ru" : "Смесь салатных листьев, огурцы и помидоры Черри",
+        "description_en" : "Mixture of lettuce leaves, cucumbers and Cherry tomatoes",
+        "weight": "210 g.",
+        "price": "71",
+        "category_ro": "Salate",
+        "category_en": "Salad",
+        "category_ru": "Салаты",
+        "backgroundImage": "food_images/mcdonalds/primavera.webp"
+
+    },
+    "17": {
+        "name": "Greek salad ",
+        "description_ro": "Amestec savuros de salate, roșii Cherry, castraveți, măsline, ceapă și cremă de cașcaval",
+        "description_ru" : "Смесь салатных листьев, помидоры Черри, огурцы, маслины, лук и сырный крем",
+        "description_en" : "Mixture of lettuce leaves, Сherry tomatoes, cucumbers, black olives, onion and cheese cream",
+        "weight": "254 g.",
         "price": "80",
-        "category_ro": "Pui",
-        "category_en": "Chicken",
-        "category_ru": "Куриное мясо",
-        "backgroundImage": "food_images/mcdonalds/chickenwings.webp"
+        "category_ro": "Salate",
+        "category_en": "Salad",
+        "category_ru": "Салаты",
+        "backgroundImage": "food_images/mcdonalds/greek.webp"
+
+    },
+    "18": {
+        "name": "Caesar salad ",
+        "description_ro": "Amestec savuros de salate, file de pui, roșii cherry, brânză Cheddar și crutoane",
+        "description_ru" : "Смесь салатных листьев, куриное филе, помидоры Черри, сыр чеддер и сухарик",
+        "description_en" : "Mixture of lettuce leaves, chicken fillet, Cherry tomatoes, Сheddar cheese and сrackers",
+        "weight": "267 g.",
+        "price": "80",
+        "category_ro": "Salate",
+        "category_en": "Salad",
+        "category_ru": "Салаты",
+        "backgroundImage": "food_images/mcdonalds/caesar.webp"
+
+    },
+    "19": {
+        "name": "Shrimps salad",
+        "description_ro": "Amestec savuros de salate, creveți, brânză Cheddar, roșii Cherry și crutoane.",
+        "description_ru" : "Смесь салатных листьев, креветки, сыр Чеддер, помидоры Черри и сухарики.",
+        "description_en" : "Mixture of lettuce leaves, Shrimps, Cheddar cheese, Сherry tomatoes and crackers.",
+        "weight": "270 g.",
+        "price": "100",
+        "category_ro": "Salată",
+        "category_en": "Salad",
+        "category_ru": "Салаты",
+        "backgroundImage": "food_images/mcdonalds/shrimps.webp"
 
     }
 
