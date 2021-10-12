@@ -10,7 +10,7 @@ import {itemAddedPopupWindow} from "./creatNewCartItem.js"
 -------------------------------------------------------------------------------------------------------*/
 let food_tile_counter = document.getElementsByTagName("menu-item");
 
-//minus button = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[0];
+//minus button = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[1].children[0];
 //count = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[1];
 //plus button = document.getElementsByTagName("menu-item")[0].shadow.lastElementChild.lastElementChild.children[2];
 
@@ -19,20 +19,20 @@ let food_tile_counter = document.getElementsByTagName("menu-item");
 
 (function incrementDecrementFoodTileItem() {
   for (let index in Object.keys(food_tile_counter)) {
-    food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[0].addEventListener("click", (e) => {
-      let currentItemCount = food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1];
+    food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[0].addEventListener("click", (e) => {
+      let currentItemCount = food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1];
 
       currentItemCount.value == 1 ? e.preventDefault() : currentItemCount.value = Number(currentItemCount.value) - 1;
-      food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value = currentItemCount.value;
+      food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value = currentItemCount.value;
     })
   }
 
   for (let index in Object.keys(food_tile_counter)) {
-    food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[2].addEventListener("click", (e) => {
-      let currentItemCount = food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1];
+    food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[2].addEventListener("click", (e) => {
+      let currentItemCount = food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1];
 
       currentItemCount.value == 10 ? e.preventDefault() : currentItemCount.value = Number(currentItemCount.value) + 1;
-      food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value = currentItemCount.value;
+      food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value = currentItemCount.value;
 
     })
   }
@@ -54,15 +54,15 @@ let cartButton = document.getElementById("cart_button");
 
 
 for (let index in Object.keys(food_tile_counter)) {
-  food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[3].addEventListener("click", () => {
+  food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[3].addEventListener("click", () => {
 
     let itemToAdd = Object.values(food_tile_counter)[index].menuItem;
 
     cartNotEmpty();
     //pushes menu item to cart with count specified by user
-    creatNewCartItem(cart_modal_items, itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value ); 
+    creatNewCartItem(cart_modal_items, itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value ); 
     //adds the popup when an item is added (timeout 4 seconds)
-    itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].value );
+    itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value );
   })
 }
 

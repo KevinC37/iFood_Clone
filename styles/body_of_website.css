@@ -327,7 +327,7 @@
 
 
 .food_image {
-    height: 180px;
+    min-height: 180px;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;

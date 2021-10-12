@@ -25,9 +25,9 @@ window.onload = function updateLang() {
 function updateFoodDescription() {
     for (let k in Object.values(menuItems)) {
         if (document.getElementsByClassName("language_pointer")[0].value.toLowerCase() == "ro") {
-            menuItems[k].shadow.lastElementChild.children[1].children[1].innerHTML =
+            menuItems[k].shadow.lastElementChild.children[1].children[1].children[1].innerHTML =
                 menuItems[k].menuItem.description_ro;
-            document.getElementsByTagName("menu-item")[k].shadow.lastElementChild.children[2].children[3].children[0].innerHTML = "Adaugă";
+            document.getElementsByTagName("menu-item")[k].shadow.lastElementChild.children[2].children[3].children[1].children[0].innerHTML = "Adaugă";
 
             if(document.getElementById("cart_button_price").innerHTML == "Пустая корзина" || document.getElementById("cart_button_price").innerHTML == "Empty cart") {
                 document.getElementById("cart_button_price").innerHTML = "Coș gol";
@@ -40,7 +40,7 @@ function updateFoodDescription() {
                
             }
         } else if (document.getElementsByClassName("language_pointer")[0].value.toLowerCase() == "ru") {
-            menuItems[k].shadow.lastElementChild.children[1].children[1].innerHTML =
+            menuItems[k].shadow.lastElementChild.children[1].children[1].children[1].innerHTML =
 
                 menuItems[k].menuItem.description_ru;
 
@@ -58,10 +58,10 @@ function updateFoodDescription() {
             }
 
         } else if (document.getElementsByClassName("language_pointer")[0].value.toLowerCase() == "en") {
-            menuItems[k].shadow.lastElementChild.children[1].children[1].innerHTML =
+            menuItems[k].shadow.lastElementChild.children[1].children[1].children[1].innerHTML =
 
                 menuItems[k].menuItem.description_en;
-            document.getElementsByTagName("menu-item")[k].shadow.lastElementChild.children[2].children[3].children[0].innerHTML = "Add";
+            document.getElementsByTagName("menu-item")[k].shadow.lastElementChild.children[2].children[3].children[1].children[0].innerHTML = "Add";
 
             if(document.getElementById("cart_button_price").innerHTML == "Coș gol" || document.getElementById("cart_button_price").innerHTML == "Пустая корзина") {
                 document.getElementById("cart_button_price").innerHTML = "Empty cart";

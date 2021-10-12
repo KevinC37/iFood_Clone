@@ -19,7 +19,7 @@ export class menuItemComponent extends HTMLElement {
         
 .food_items_card_template {
     width: 295px;
-    height: 368px;
+    height: 422px;
     padding: 20px;
 
     border-radius: 12px;
@@ -36,11 +36,12 @@ export class menuItemComponent extends HTMLElement {
 .food_description_tile {
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
 }
 
 
 .food_image {
-    height: 180px;
+    min-height: 180px;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
@@ -55,7 +56,7 @@ export class menuItemComponent extends HTMLElement {
 
 
 .food_description {
-    padding-top: 16px;
+    
     color: #555;
     font-size: 14px;
     line-height: 18px;
@@ -89,8 +90,12 @@ export class menuItemComponent extends HTMLElement {
 
     display: flex;
     flex-direction: row;
-
+    
     align-items: center;
+}
+
+.footer {
+    margin-top: auto;
 }
 
 .food_tile_counter {
@@ -173,7 +178,7 @@ export class menuItemComponent extends HTMLElement {
     }
     
     .food_items_card_template {
-        width: 326px;
+        width: 422px;
         height: 314px;
 
     }
@@ -226,9 +231,10 @@ export class menuItemComponent extends HTMLElement {
         <div class="food_description_tile">
         <span class="food_name">${this.menuItem.name}</span>
         <span class="food_description">${this.menuItem.description_ro}</span>
-        <span class="food_weight">${this.menuItem.weight}</span>
+        
         </div>
-    
+        <div class="footer">
+        <span class="food_weight">${this.menuItem.weight}</span>
         <div class="food_tile_counter_container">
         <button class="food_tile_counter_minus">
             <img src="icons/minus.svg" alt="">
@@ -241,6 +247,7 @@ export class menuItemComponent extends HTMLElement {
             <span>Adaugă</span>
             <span>${this.menuItem.price} L</span>
         </button>
+        </div>
         </div>
         </div>
         <!----------END OF FOOD ITEM CARD---------->

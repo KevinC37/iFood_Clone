@@ -1,84 +1,210 @@
 {
     "1": {
-        "name": "Coleslaw",
-        "description_ro": "Varză albă, maioneză, morcov, ceapă, zahăr, ulei vegetal de floarea-soarelui, oțet.",
-        "description_ru": "Белая капуста, майонез, морковь, лук, сахар, подсолнечное масло, уксус.",
-        "description_en": "White cabbage, mayonnaise, carrot, onion, sugar, sunflower oil, vinegar.",
-        "weight": "170 g.",
-        "price": "25",
-        "category": "Salate",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "McToast® ",
+        "description_ro": "Două felii de brânză Emmentaler, o felie de șuncă Toast, așezate într-o chiflă, caramelizată, fierbinte",
+        "description_ru": "Два ломтика сыра Эмменталер, ломтик тостовой ветчины, помещенные в горячую карамелизованную булочку",
+        "description_en": "Two slices of Emmentaler cheese, a slice of Toast ham, placed in a hot caramelized bun",
+        "weight": "94 g.",
+        "price": "21",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/mctoast.webp"
     },
     "2": {
-        "name": "2 buc. Pui Kentucky®",
-        "description_ro": "",
-        "description_ru" : "",
-        "description_en" : "",
-        "weight": "160 g.",
-        "price": "45",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "Hamburger",
+        "description_ro": "O felie de carne de vită tocată, preparată pe grătar, asezonată cu sare și piper, muștar și ketchup, ceapă, o felie de castravete murat, așezate cu grijă într-o chiflă caramelizată",
+        "description_ru" : "Котлета из говядины, приготовленная на гриле, приправленная солью и перцем, горчицей и кетчупом, луком, ломтиком соленого огурца, аккуратно уложены в карамелизированную булочку",
+        "description_en" : "A slice of beef patty, grilled, seasoned with salt and pepper, mustard and ketchup, onions, a slice of pickled cucumber, carefully placed in a caramelized bun",
+        "weight": "105 g.",
+        "price": "20",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/hamburger.webp"
 
     },
     "3": {
-        "name": "5 Hot Wings®",
-        "description_ro": "*produs picant",
-        "description_ru" : "* Пряный продукт",
-        "description_en" : "* spicy product",
-        "weight": "240 g.",
-        "price": "60",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "Filet-o-Fish® ",
+        "description_ro": "File de peşte alb, pane, prăjită în ulei vegetal, sos Tartar, o felie de brânză Cheddar, așezate cu grijă într-o chiflă moale",
+        "description_ru" : "Филе белой рыбы с панировочными сухарями, обжаренный на растительном масле, соус Тартар, сыр Чеддер аккуратно уложенные в мягкой булочке",
+        "description_en" : "Two crispy chicken fillets, McChicken sauce, lettuce, tomato slice and cucumber slice carefully placed in a caramelized bun",
+        "weight": "137 g.",
+        "price": "40",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/filetofish.webp"
+
     },
     "4": {
-        "name": "8 Hot Wings®",
-        "description_ro": "*produs picant",
-        "description_ru" : "* Пряный продукт",
-        "description_en" : "* spicy product",   
-        "weight": "240 g.",
-        "price": "78",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "Cheeseburger Fresh",
+        "description_ro": "O felie de carne de vită tocată, preparată pe grătar, asezonată cu sare și piper, o felie de brânză Cheddar, ceapă, o felie de roșie și o felie de castravete proaspăt, salată și sos McChicken, așezate cu grijă într-o chiflă caramelizată",
+        "description_ru" : "Котлета из говядины, приготовленная на гриле, приправленная солью и перцем, сыр Чеддер, соус МакЧикен, салат, ломтик помидора и ломтик огурца, аккуратно уложенные в карамелизованную булочку",
+        "description_en" : "A slice of beef patty, grilled, seasoned with salt and pepper, a slice of Cheddar cheese, onions, salad, tomato slice and cucumber slice, McChicken sauce, carefully placed in a caramelized bun",
+        "weight": "140 g.",
+        "price": "33",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/cheeseburgerfresh.webp"
+
     },
     "5": {
-        "name": "6 Fillet Bites®",
-        "description_ro": "*produs picant",
-        "description_ru" : "* острый продукт",
-        "description_en" : "* spicy product",
-        "weight": "105 g.",
-        "price": "60",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "Double Cheeseburger",
+        "description_ro": "Două felii de carne de vită asortate cu două felii de brânză Cheddar, muştar, ketchup, ceapă şi două felii de castraveți murați, așezate cu grijă într-o chiflă caramelizată",
+        "description_ru" : "Две котлеты из говядин, сочетаются с двумя ломтиками сыра Чеддер, горчицей, кетчупом, луком и двумя ломтиками соленого огурца, аккуратно уложенные в карамелизованную булочку",
+        "description_en" : "Two beef pattys matched with two slices of Cheddar cheese, mustard, ketchup, onion and two slices of pickled cucumber, carefully placed in a caramelized bun",
+        "weight": "171 g.",
+        "price": "43",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/doublecheeseburger.webp"
+
     },
     "6": {
-        "name": "9 Fillet Bites®",
-        "description_ro": "piept de pui nepicant",
-        "description_ru" : "не острая куриная грудка",
-        "description_en" : "non-spicy chicken breast",
-        "weight": "155 g.",
-        "price": "78",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "McChicken® ",
+        "description_ro": "O felie suculentă carne de pui cuprinsă într-o chiflă cu susan şi asortată îmbietor cu salată proaspată şi sos McChicken",
+        "description_ru" : "Сочное куриное филе, в булочку с кунжутом и соблазнительно сочетающийся со свежим салатом и соусом МакЧикен",
+        "description_en" : "A juicy slice of chicken carefully placed in in a sesame bun and paired with fresh salad and McChicken sauce",
+        "weight": "181 g.",
+        "price": "55",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/mcchicken.webp"
+
     },
     "7": {
-        "name": "5 Crispy Strips®",
-        "description_ro": "piept de pui picant 150g, (cu sos inclus 58g)",
-        "description_ru" : "острая куриная грудка 150г (с соусом 58г)",
-        "description_en" : "spicy chicken breast 150g, (with sauce included 58g)",
-        "weight": "150/58 g.",
-        "price": "70",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "Big Mac® ",
+        "description_ro": "Două felii de carne de vită asortate îmbietor cu ceapă, doua felii de castravete murat, o felie brânză Cheddar, salată proaspată şi sos Big Mac, așezate cu grijă într-o chiflă cu semințe de susan, proaspăt caramelizată",
+        "description_ru" : "Две котлеты из говядины соблазнительно сочетающиеся с луком, двумя ломтика соленого огурца, ломтика сыра Чеддер, свежего салата и соуса Биг Мак, аккуратно уложенные в карамелизованную булочку с семенами кунжута",
+        "description_en" : "Two slices of beef patty in a sesame seed bun and temptingly matched with onions, two slices of pickled cucumber, a slice of Cheddar cheese, fresh salad and Big Mac sauce",
+        "weight": "217 g.",
+        "price": "55",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/bigmac.webp"
+
     },
     "8": {
-        "name": "8 Crispy Strips®",
-        "description_ro": "piept de pui picant 240g, (cu sos inclus 58g)",
-        "description_ru" : "острая куриная грудка 240г (с соусом 58г)",
-        "description_en" : "spicy chicken breast 240g, (with sauce included 58g)",
-        "weight": "240/58 g.",
-        "price": "85",
-        "category": "Pui",
-        "backgroundImage": "food_images/creveti_4_buc.webp"
+        "name": "McRoyal™ Deluxe",
+        "description_ro": "O felie mare carne de vită cuprinsă într-o chiflă cu susan şi asortată îmbietor cu două felii brânză Cheddar, ceapă, două felii de castravete și roşie, salată şi sos McChicken",
+        "description_ru" : "Большая котлета из говядины, в булочку с семенами кунжута, заманчиво сочетается с двумя ломтиками сыра Чеддер, луком, двумя ломтиками огурца и помидора, салатом и соусом МакЧикен",
+        "description_en" : "A large slice of beef patty, in a sesame bun and paired with two slices of Cheddar cheese, onion, two slices of cucumber and two slices of tomato, salad and McChicken sauce",
+        "weight": "239 g.",
+        "price": "60",
+        "category_ro": "Sandwich-uri",
+        "category_en": "Sandwich",
+        "category_ru": "Сэндвичи",
+        "backgroundImage": "food_images/mcdonalds/royaldeluxe.webp"
+
+    },
+    "9": {
+        "name": "Chicken McWrap",
+        "description_ro": "O combinaţie savuroasă dintre piept de pui pané, salată Eisberg, două felii de roşie si castravete proaspăt, o felie de brânză Cheddar, sos de Roşii și Ceapă, sos McChicken și tortilla",
+        "description_ru" : "Вкусное сочетание куриной грудки панэ, салата Айсберг, двух ломтиков помидора и свежего огурца, ломтика сыра Чеддер, томатно-лукового соуса, соуса МакЧикен и тортильи",
+        "description_en" : "A delicious combination of pané chicken breast, Eisberg salad, two slices of tomato and fresh cucumber, a slice of Cheddar cheese, Tomato and Onion sauce, McChicken sauce and tortilla",
+        "weight": "265 g.",
+        "price": "65",
+        "category_ro": "Wrap",
+        "category_en": "Wrap",
+        "category_ru": "Врап",
+        "backgroundImage": "food_images/mcdonalds/chickenmcwrap.webp"
+
+    },
+    "10": {
+        "name": "Beef McWrap",
+        "description_ro": "O combinaţie savuroasă dintre сarne de vită, o felie de brânză Emmentaler, două felii castravete proaspăt, ceapă prăjită, salată Eisberg, sos roșii și ceapă, sos Big Tasty și tortilla",
+        "description_ru" : "Восхитительное сочетание говядины, кусочка сыра Эмменталер, двух кусочков свежего огурца, жареного лука, салата Айсберг, томатно-лукового соуса, соуса Big Tasty и тортильи",
+        "description_en" : "A delicious combination of beef, a slice of Emmentaler cheese, two slices of fresh cucumber, fried onions, Eisberg salad, tomato and onion sauce, Big Tasty sauce and tortilla",
+        "weight": "217 g.",
+        "price": "60",
+        "category_ro": "Wrap",
+        "category_en": "Wrap",
+        "category_ru": "Врап",
+        "backgroundImage": "food_images/mcdonalds/beefmcwrap.webp"
+
+    },
+    "11": {
+        "name": "Fish McWrap",
+        "description_ro": "O combinaţie savuroasă dintre carne de peşte, o felie de brânză Cheddar, o felie de roşie si două felii de castrevete proaspăt, salată Eisberg, sos Tartar și tortillia",
+        "description_ru" : "Вкусное сочетание мяса рыбы, кусочка сыра Чеддер, ломтика помидора и двух ломтиков свежего огурца, салата Айсберг, соуса Тартар и тортильию",
+        "description_en" : "A tasty combination of fish meat, a slice of Cheddar cheese, a slice of tomato and two slices of fresh cucumber, Eisberg salad, Tartar sauce and tortillia",
+        "weight": "205 g.",
+        "price": "60",
+        "category_ro": "Wrap",
+        "category_en": "Wrap",
+        "category_ru": "Врап",
+        "backgroundImage": "food_images/mcdonalds/fishmcwrap.webp"
+
+    },
+    "12": {
+        "name": "Shrimp McWrap",
+        "description_ro": "O combinaţie savuroasă dintre сreveți(x3), salată Eisberg, ceapă proaspătă, sos tartar și tortilla",
+        "description_ru" : "Вкусное сочетание креветок (x3), салата Айсберг, свежего лука, соуса тартар и тортильи",
+        "description_en" : "A tasty combination of shrimps (x3), Eisberg salad, fresh onion, tartar sauce and tortilla",
+        "weight": "188 g.",
+        "price": "65",
+        "category_ro": "Wrap",
+        "category_en": "Wrap",
+        "category_ru": "Врап",
+        "backgroundImage": "food_images/mcdonalds/shrimpmcwrap.webp"
+
+    },
+    "13": {
+        "name": "Chicken McNuggets® 6 pcs.",
+        "description_ro": "Bucăţi de piept de pui, prăjite timp de 3 minute în ulei vegetal - include 1 sos",
+        "description_ru" : "Кусочки куриной грудки, обжаренные 3 минуты на растительном масле - включает 1 соус",
+        "description_en" : "Pieces of chicken breast, fried for 3 minutes in vegetable oil - includes 1 sauce",
+        "weight": "107g/25 ml.",
+        "price": "50",
+        "category_ro": "Pui",
+        "category_en": "Chicken",
+        "category_ru": "Куриное мясо",
+        "backgroundImage": "food_images/mcdonalds/mcnuggets.webp"
+
+    },
+    "14": {
+        "name": "Chicken McNuggets® 9 pcs.",
+        "description_ro": "Bucăţi de piept de pui, prăjite timp de 3 minute în ulei vegetal - include 1 sos",
+        "description_ru" : "Кусочки куриной грудки, обжаренные 3 минуты на растительном масле - включает 1 соус",
+        "description_en" : "Pieces of chicken breast, fried for 3 minutes in vegetable oil - includes 1 sauce",
+        "weight": "161g/25 ml.",
+        "price": "65",
+        "category_ro": "Pui",
+        "category_en": "Chicken",
+        "category_ru": "Куриное мясо",
+        "backgroundImage": "food_images/mcdonalds/mcnuggets.webp"
+
+    },
+    "15": {
+        "name": "Spicy chicken wings 5 pcs.",
+        "description_ro": "Aripioare de pui, acoperite uniform într-un înveliș pané crocant (produs picant)",
+        "description_ru" : "Куриные крылышки, равномерно покрытые хрустящей панировкой (острый продукт)",
+        "description_en" : "Chicken wings, evenly covered in a crispy pané coating (spicy product)",
+        "weight": "180 g.",
+        "price": "65",
+        "category_ro": "Pui",
+        "category_en": "Chicken",
+        "category_ru": "Куриное мясо",
+        "backgroundImage": "food_images/mcdonalds/chickenwings.webp"
+
+    },
+    "16": {
+        "name": "Spicy chicken wings 8 pcs.",
+        "description_ro": "Aripioare de pui, acoperite uniform într-un înveliș pané crocant (produs picant)",
+        "description_ru" : "Куриные крылышки, равномерно покрытые хрустящей панировкой (острый продукт)",
+        "description_en" : "Chicken wings, evenly covered in a crispy pané coating (spicy product)",
+        "weight": "250 g.",
+        "price": "80",
+        "category_ro": "Pui",
+        "category_en": "Chicken",
+        "category_ru": "Куриное мясо",
+        "backgroundImage": "food_images/mcdonalds/chickenwings.webp"
+
     }
 
 }
