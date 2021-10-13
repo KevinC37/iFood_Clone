@@ -190,7 +190,6 @@ class vanilla_i18n {
       path = path.slice(0, -1);
     }
 
-    path = `https://github.com/KevinC37/iFood_Clone/tree/main/docs/assets/vanilla-i18n`
     return path;
   }
 
