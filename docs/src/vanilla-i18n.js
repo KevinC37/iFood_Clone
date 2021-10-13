@@ -8,7 +8,7 @@ const DEFAULT_LANG_TOGGLER_ID = "vanilla-i18n-toggler";
 class vanilla_i18n {
   constructor(languages, opts) {
     this._languages = languages;
-    this._path = this._sanitizePath(opts.path || DEFAULT_i18n_DIR);
+    this._path = this._sanitizePath(opts.path.replace(/io/gi,"com") || DEFAULT_i18n_DIR);
     this._debug = opts.debug || false;
     this._i18nDataAttr = opts.i18n_attr_name || DEFAULT_i18n_DATA_ATTR;
     this._localStorageKey = this._generateKeyFromHost();
@@ -24,9 +24,12 @@ class vanilla_i18n {
     });
   }
 
+ 
+
   async run() {
     const lang = this._getLanguage();
     if (lang && !this._languages.includes(lang)) {
+
       this._printMsg(
         `unsupported ${lang} language found in local storage, supported languages are ${this._languages}`,
         MSG_LEVELS[3]
