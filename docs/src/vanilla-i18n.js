@@ -8,7 +8,7 @@ const DEFAULT_LANG_TOGGLER_ID = "vanilla-i18n-toggler";
 class vanilla_i18n {
   constructor(languages, opts) {
     this._languages = languages;
-    this._path = this._sanitizePath(opts.path.replace(/io/gi,"com") || DEFAULT_i18n_DIR);
+    this._path = this._sanitizePath(opts.path || DEFAULT_i18n_DIR);
     this._debug = opts.debug || false;
     this._i18nDataAttr = opts.i18n_attr_name || DEFAULT_i18n_DATA_ATTR;
     this._localStorageKey = this._generateKeyFromHost();
@@ -189,6 +189,11 @@ class vanilla_i18n {
     if (path[path.length - 1] === "/") {
       path = path.slice(0, -1);
     }
+    if(path.includes("https://kevinc37.github.io")) {
+      path = path.replace(/\.io/gi,"com");
+      
+    }
+    console.log(path)
     return path;
   }
 
