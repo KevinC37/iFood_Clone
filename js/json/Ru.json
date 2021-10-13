@@ -1,0 +1,73 @@
+{
+    "language": "Ru",
+    "header": {
+        "address": "Улица Pacii 10",
+        "cartbutton": "Моя корзина"
+    },
+    "searchbar": {
+        "placeholder" :"Поиск ресторанов"
+    },
+    "addbutton": "Добавить",
+    "emptycart": {
+        "button": "Корзина пуста",
+        "modal": {
+            "title": "Ваша корзина пуста!",
+            "additems": "Добавьте товары в корзину, чтобы продолжить покупки."
+        }
+    },
+    "restaurant": {
+        "delivery": "Стоимость доставки:&nbsp;",
+        "payment": {
+            "card": "Карта",
+            "cash": "Наличные"
+        },
+        "map": "Посмотреть на карте",
+        "description": "Рестораны McDonald's предлагают 100% свежие, высококачественные продукты в любое время и в любом месте"
+    },
+    "cart": {
+        "edit": "Редактирование",
+        "delete": "Убрать",
+        "delivery": "Доставка: ",
+        "total": "Итого: ",
+        "button_next": "Продолжить"
+    },
+
+        "help": {
+            "title": "Помощь",
+            "delivery": "Доставка"
+        },
+        "ifood": {
+            "about": "О нас",
+            "become_courier": "Стать курьером",
+            "become_partner": "Стать партнёром",
+            "mastercard_promo": "Промо Mastercard"
+        },
+        "legal": {
+            "title": "Юридическая информация",
+            "terms": "Пользовательское соглашение",
+            "confidentiality": "Политика конфиденциальности",
+            "cookies": "Политика cookies"
+        },
+        "support": {
+            "title": "Поддержка",
+            "phone": "Телефон:&nbsp;(022) 000 100",
+            "email": "Эл. почта: &nbsp;support@ifood.md"
+        },
+        "subscribe": "Подпишись",
+        "rights_reserved": "Все права защищены. ",
+
+        "schedule": {
+            "monday": "Понедельник:&nbsp",
+            "tuesday": "Вторник:&nbsp",
+            "wednesday": "Среда:&nbsp",
+            "thursday": "Четверг:&nbsp",
+            "friday": "Пятница:&nbsp",
+            "saturday": "Суббота:&nbsp",
+            "sunday": "Воскресенье:&nbsp"
+        },
+        "promo": {
+            "title": "бесплатная доставка",
+            "description": "Оплачивай с Mastercard от 200 лей и получи бесплатную доставку"
+        }
+
+}

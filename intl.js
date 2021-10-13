@@ -1,4 +1,3 @@
-
 const languages = [
     "Ro",
     "Ru",
@@ -7,7 +6,7 @@ const languages = [
 new vanilla_i18n(
     languages,
     opts = {
-        path: "docs/assets/vanilla-i18n",
+        path: "js/json",
         debug: true,
         i18n_attr_name: "vanilla-i18n",
         toggler_id: "vanilla-i18n-toggler",
