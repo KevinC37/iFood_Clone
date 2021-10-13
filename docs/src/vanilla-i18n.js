@@ -189,11 +189,8 @@ class vanilla_i18n {
     if (path[path.length - 1] === "/") {
       path = path.slice(0, -1);
     }
-    if(path.includes("https://kevinc37.github.io")) {
-      path = path.replace(/\.io/gi,"com");
-      
-    }
-    console.log(path)
+
+    path = `https://github.com/KevinC37/iFood_Clone/tree/main/docs/assets/vanilla-i18n`
     return path;
   }
 
