@@ -1,5 +1,5 @@
 import {pushRestaurantMenuToHTML} from "./parse_restaurant_menu.js";
-
+import { foodCategories } from "./parse_restaurant_menu.js";
 export let menuItemList = {};
 
 (async function fetchAndPushMenuToHTML() {
@@ -9,7 +9,7 @@ export let menuItemList = {};
         
         Object.assign(menuItemList, restaurantMenu);
         pushRestaurantMenuToHTML(restaurantMenu);
-
+        foodCategories(restaurantMenu);
 })();
 
 

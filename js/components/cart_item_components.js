@@ -227,7 +227,16 @@ export class itemComponent extends HTMLElement {
         
      
 
-
+    const CURRENT_LANGUAGE = document.getElementsByClassName("language_pointer")[0].value.toLowerCase();
+    let edit = "Editează"
+    let deleteBtn = "Șterge"
+            if(CURRENT_LANGUAGE == "ru") {
+                edit = "Редактирование";
+                deleteBtn = "Убрать";
+            } else if(CURRENT_LANGUAGE == "en"){
+                edit = "Edit";
+                deleteBtn = "Delete";
+            }
 
         this.shadow.innerHTML = `<style>
         
@@ -318,8 +327,8 @@ export class itemComponent extends HTMLElement {
                     </div>
         
                     <div class="cart_modal_edit_delete">
-                        <button class="cart_modal_edit">Editează</button>
-                        <button class="cart_modal_delete">Șterge</button>
+                        <button id="cart_modal_edit" class="cart_modal_edit">${edit}</button>
+                        <button id="cart_modal_delete" class="cart_modal_delete">${deleteBtn}</button>
         
                     </div>
                 </div>

@@ -1,0 +1,139 @@
+#categories_container {
+    max-width: 1400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* padding: 0 16px 0 16px; */
+
+    overflow: scroll;
+    scrollbar-width: none;
+    cursor: pointer;
+
+    position: relative;
+
+
+    z-index: 0;
+
+    scroll-behavior: smooth;
+}
+
+
+
+.scroll_left::before {
+    height: 52px;
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    content: "";
+    background: linear-gradient(90deg,rgba(250,250,250,10%) 0,#fafafa 100%);
+
+}
+
+.scroll_right::after {
+    height: 52px;
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    content: "";
+    background: linear-gradient(90deg,rgba(250,250,250,0) 0,#fafafa 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+#categories_container button.category.all {
+    color: #000;
+    height: 43px;
+    border: 1px solid #ffcf33;
+    box-shadow: 0 2px 0 #ffcf33;
+}
+#categories_container button.category {
+ 
+    padding: 0 16px 0 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+
+ 
+    font-size: 1rem;
+    font-weight: 500;
+}
+#categories_container button {
+
+    outline: none;
+    margin-right: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+#carousel_previousbtn,
+#carousel_nextbtn {
+min-width: 51px;
+max-height: 52px;
+position: relative;
+
+padding: 15px 21px 19px 21px;
+
+background: #f0f0f0;
+border-radius: 12px;
+user-select: none;
+
+border: none;
+outline: none;
+
+cursor: pointer;
+z-index: 1;
+
+}
+
+#carousel_previousbtn {
+    margin-right: 16px;
+}
+
+
+
+#carousel_previousbtn:hover,
+#carousel_nextbtn:hover {
+    background: #e5e5e5;
+}
+
+#carousel_previousbtn img,
+#carousel_nextbtn img {
+    vertical-align: middle;
+}
+
+
+
+#carousel_container {
+    display: grid;
+    max-width: 1400px;
+    height: 52px;
+    padding: 16px 0 24px 0px;
+    margin: 0 auto;
+    grid-template-columns: [arrow-right] 51px [categories_container] 1fr [arrow-left] 51px;
+
+    justify-content: center;
+    align-items:center;
+}
+
+@media screen and (max-width: 1400px) {
+    #carousel_container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    #carousel_container {
+        max-width: 1000px;
+    }
+}

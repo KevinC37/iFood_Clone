@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/copyright.css" />
     <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="styles/carousel.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +50,7 @@
               <label class="location_icon" for="address">
                 <img src="icons/location.svg" alt="    " />
               </label>
-              <span vanilla-i18n="header.address" class="user_address"> strada Păcii 10 </span>
+              <span id="header.address" class="user_address"> strada Păcii 10 </span>
             </div>
           </div>
 
@@ -105,7 +106,7 @@
           </div>
           <div class="restaurant_description">
       
-              <span vanilla-i18n="restaurant.description">Restaurantele McDonald's oferă produse 100% proaspete şi de
+              <span id="restaurant.description">Restaurantele McDonald's oferă produse 100% proaspete şi de
                 calitate în orice loc şi în orice moment</span> 
         
           </div>
@@ -115,48 +116,48 @@
       <div class="additional_information">
         <!---PRICE FOR SHIPPING-->
         <div class="shipping">
-          <span vanilla-i18n="restaurant.delivery">Prețul livrării: &nbsp;</span>
-          <span> 29 MDL</span>
+          <span id="restaurant.delivery">Prețul livrării: &nbsp;</span>
+          <span> &nbsp;29 MDL</span>
         </div>
         <!---RESTAURANT SCHEDULE--->
         <div class="schedule">
-          <span vanilla-i18n="schedule.wednesday" class="work_day">Miercuri</span>
+          <span id="schedule.wednesday" class="work_day">Miercuri</span>
           <span class="work_hours">10:00 - 22:00</span>
 
             <!--------------SCHEDULE BOX----------->
         <div class="schedule_box" style="display: none;">
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.monday">Luni: </span>
+            <span id="schedule.monday">Luni: </span>
             <span>10:00 - 22:00</span>
           </div>
 
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.tuesday">Marți: </span>
+            <span id="schedule.tuesday">Marți: </span>
             <span>10:00 - 22:00</span>
           </div>
 
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.wednesday">Miercuri: </span>
+            <span id="schedule.wednesday">Miercuri: </span>
             <span>10:00 - 22:00</span>
           </div>
 
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.thursday">Joi: </span>
+            <span id="schedule.thursday">Joi: </span>
             <span>10:00 - 22:00</span>
           </div>
 
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.friday">Vineri: </span>
+            <span id="schedule.friday">Vineri: </span>
             <span>10:00 - 22:45</span>
           </div>
 
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.saturday">Sâmbătă: </span>
+            <span id="schedule.saturday">Sâmbătă: </span>
             <span>10:00 - 22:45</span>
           </div>
 
           <div class="schedule_box_element">
-            <span vanilla-i18n="schedule.sunday">Duminică: </span>
+            <span id="schedule.sunday">Duminică: </span>
             <span>10:00 - 22:45</span>
           </div>
         </div>
@@ -167,18 +168,18 @@
         <!----CARD PAYMENT METHOD--->
         <div class="payment_method_card">
           <img src="icons/credit-card.svg" alt="Card" />
-          <span vanilla-i18n="restaurant.payment.card">Card</span>
+          <span id="restaurant.payment.card">Card</span>
         </div>
         <!----CASH PAYMENT METHOD--->
         <div class="payment_method_cash">
           <img src="icons/cash.svg" alt="Cash" />
-          <span vanilla-i18n="restaurant.payment.cash">Cash</span>
+          <span id="restaurant.payment.cash">Cash</span>
         </div>
 
         <!----RESTAURANT LOCATION--->
         <div class="resturant_location">
           <img src="icons/restaurant-page-location.svg" alt="" />
-          <span vanilla-i18n="restaurant.map"  >Vezi pe hartă</span>
+          <span id="restaurant.map"  >Vezi pe hartă</span>
         </div>
       </div>
 
@@ -189,8 +190,8 @@
           <div class="banner_promo">
             <img src="icons/mastercard-banner-icon.svg" alt="" />
             <div class="promo_info">
-              <span vanilla-i18n="promo.title" class="promo_title">livrare gratuită</span>
-              <span vanilla-i18n="promo.description" class="promo_description"
+              <span id="promo.title" class="promo_title">livrare gratuită</span>
+              <span id="promo.description" class="promo_description"
                 >Achită cu Mastercard de la 200 lei și primește livrare
                 gratuită</span
               >
@@ -199,20 +200,29 @@
         </div>
 
         <!-----CATEGORIES FILTER------->
-        <div class="categories_container">
-          <button class="category all">Toate</button>
-          <button class="category">Noutăți</button>
-          <button class="category">Creveți</button>
-          <button class="category">Happy Meal</button>
-          <button class="category">Sandwich-uri</button>
-          <button class="category">Wrap</button>
-          <button class="category">Cartofi Prăjiți</button>
-          <button class="category">Pui</button>
-          <button class="category">Salate</button>
-          <button class="category">Deserturi</button>
-          <button class="category">Sosuri</button>
-          <button class="category">Băuturi</button>
-        </div>
+        <div id="carousel_container">
+          <button
+            id="carousel_previousbtn"
+            class=""
+          >
+            <img  alt="R" src="icons/arrow-right.svg" />
+          </button>
+          <div id="categories_container">
+            <button class="category all">Toate</button>
+
+
+          </div>
+      
+          <button
+            id="carousel_nextbtn"
+            class="scroll_right"
+          >
+            <img alt="L" src="icons/arrow-left.svg" />
+          </button>
+      </div>
+
+
+      <!----------------FOOD ITEMS CONTAINER-->
 
         <div id="food_items_container" class="food_items_container">
          
@@ -229,8 +239,8 @@
         <div class="footer_container">
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
-            <span vanilla-i18n="help.title" class="footer_row_title">Ajutor</span>
-            <a vanilla-i18n="help.delivery" class="footer_row_links" href="#">Livrare</a>
+            <span id="help.title" class="footer_row_title">Ajutor</span>
+            <a id="help.delivery" class="footer_row_links" href="#">Livrare</a>
 
             <span class="footer_row_title">Powered By</span>
 
@@ -250,34 +260,34 @@
           <div class="footer_row">
             <span class="footer_row_title">iFood</span>
 
-            <a vanilla-i18n="ifood.about" class="footer_row_links" href="#">Despre noi</a>
-            <a vanilla-i18n="ifood.become_courier" class="footer_row_links" href="#">Devino curier</a>
-            <a vanilla-i18n="ifood.become_partner" class="footer_row_links" href="#">Devino partener</a>
-            <a  vanilla-i18n="ifood.mastercard_promo" class="footer_row_links" href="#">Promo Mastercard</a>
+            <a id="ifood.about" class="footer_row_links" href="#">Despre noi</a>
+            <a id="ifood.become_courier" class="footer_row_links" href="#">Devino curier</a>
+            <a id="ifood.become_partner" class="footer_row_links" href="#">Devino partener</a>
+            <a  id="ifood.mastercard_promo" class="footer_row_links" href="#">Promo Mastercard</a>
           </div>
           <!---------FOOTER ROW END--------->
 
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
-            <span vanilla-i18n="legal.title" class="footer_row_title">Juridic</span>
+            <span id="legal.title" class="footer_row_title">Juridic</span>
 
-            <a vanilla-i18n="legal.terms" class="footer_row_links"  href="#">Termeni și condiții</a>
-            <a  vanilla-i18n="legal.confidentiality" class="footer_row_links" href="#"
+            <a id="legal.terms" class="footer_row_links"  href="#">Termeni și condiții</a>
+            <a  id="legal.confidentiality" class="footer_row_links" href="#"
               >Politica de confidențialitate</a
             >
-            <a   vanilla-i18n="legal.cookies" class="footer_row_links" href="#">Politica Cookies</a>
+            <a   id="legal.cookies" class="footer_row_links" href="#">Politica Cookies</a>
           </div>
           <!---------FOOTER ROW END--------->
 
           <!---------FOOTER ROW START--------->
           <div class="footer_row">
-            <span  vanilla-i18n="support.title" class="footer_row_title">Suport</span>
+            <span  id="support.title" class="footer_row_title">Suport</span>
 
-            <a vanilla-i18n="support.phone" class="footer_row_links" href="#"
+            <a id="support.phone" class="footer_row_links" href="#"
               >Telefon:
               <span>(022) 000 100</span>
             </a>
-            <a vanilla-i18n="support.email" class="footer_row_links" href="#"
+            <a id="support.email" class="footer_row_links" href="#"
               >Email:
               <span>support@ifood.md</span>
             </a>
@@ -287,7 +297,7 @@
               <a href="#"><img src="social_media/AppStore.svg" alt="" /></a>
             </div>
 
-            <span vanilla-i18n="subscribe" class="footer_row_title">Abonează-te</span>
+            <span id="subscribe" class="footer_row_title">Abonează-te</span>
             <div class="footer_row_links social_media">
               <a href="#"><img src="social_media/facebook.svg" alt="" /></a>
               <a href="#"><img src="social_media/instagram.svg" alt="" /></a>
@@ -303,7 +313,7 @@
       <!-------------------------------------------------------------->
       <div class="copyright_main">
         <div class="copyright_container">
-          <span>© 2021 iFood.&nbsp; <span vanilla-i18n="rights_reserved" >Toate drepturile sunt rezervate.</span> </span>
+          <span>© 2021 iFood.&nbsp; <span id="rights_reserved" >Toate drepturile sunt rezervate.</span> </span>
 
           <div class="credit_card_issuers">
             <img src="credit_card_issuers/mastercard_secure_code.svg" alt="" />
@@ -323,7 +333,7 @@
     <div id="cart_modal" style="display: none;" class="body_container">
       <div class="cart_modal_container">
         <div id="cart_modal_header" class="cart_modal_header">
-          <span vanilla-i18n="header.cartbutton" >Coșul meu</span>
+          <span id="header.cartbutton" >Coșul meu</span>
           <div id="close_modal" class="close_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -348,51 +358,32 @@
         <div id="cart_modal_footer" class="cart_modal_footer">
           <!--------------------------------------->
           <div class="cart_modal_totals">
-            <span vanilla-i18n="cart.delivery"  id="cart_modal_delivery_name">Livrare:</span>
+            <span id="cart_modal_delivery_name">Livrare:</span>
             <span id="cart_modal_delivery_price">29,00 MDL</span>
           </div>
 
           <!--------------------------------------->
           <div class="cart_modal_totals">
-            <span vanilla-i18n="cart.total" id="cart_modal_total_name">Total: </span>
+            <span id="cart_modal_total_name">Total: </span>
             <span id="cart_modal_total_price">144,00 MDL</span>
           </div>
 
           <div class="checkout_button_container">
-            <button vanilla-i18n="cart.button_next" id="continue_to_checkout">Continuă</button>
+            <button id="continue_to_checkout">Continuă</button>
           </div>
         </div>
       </div>
       </div>
     </div>
 
+    <script type="module" src="js/internationalization.js"></script>
+    <script src="js/carousel.js"></script>
     <script type="module" src="js/creatNewCartItem.js"></script>
     <script type="module" src="js/parse_restaurant_menu.js"></script>
     <script  type="module" src="js/menu_API_to_html.js"></script>
     <script type="text/javascript" src="js/cart.js"></script>
 
 
-    <script src="docs/assets/vanilla-i18n/En.json"></script>
-    <script src="docs/assets/vanilla-i18n/Ro.json"></script>
-    <script src="docs/assets/vanilla-i18n/Ru.json"></script>
-    <script src="/docs/src/vanilla-i18n.min.js"></script>
-    <script src="/docs/src/vanilla-i18n.js"></script>
-    <script>
-        const languages = [
-            "Ro",
-            "Ru",
-            "En"
-        ];
-        new vanilla_i18n(
-            languages,
-            opts = {
-                path: "docs/assets/vanilla-i18n",
-                debug: false,
-                i18n_attr_name: "vanilla-i18n",
-                toggler_id: "vanilla-i18n-toggler",
-                default_language: languages[1],
-            }
-        ).run();
-    </script> 
+
   </body>
 </html>

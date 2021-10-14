@@ -10,8 +10,25 @@ export class menuItemComponent extends HTMLElement {
         this.render();
     }
 
+    get _description_ro() {
+        return this.menuItem.description_ro;
+    }
 
     render() {
+        const CURRENT_LANGUAGE = document.getElementsByClassName("language_pointer")[0].value;
+        let description = this.menuItem.description_ro;
+        let addBtn = "Adaugă";
+
+        if(CURRENT_LANGUAGE.toLowerCase() == "ru") {
+            description = this.menuItem.description_ru;
+            addBtn = "Добавить";
+
+        } else if (CURRENT_LANGUAGE.toLowerCase() == "en") {
+            description = this.menuItem.description_en;
+            addBtn = "Add";
+        }
+
+
     
         this.shadow.innerHTML =`
         <style>
@@ -178,8 +195,8 @@ export class menuItemComponent extends HTMLElement {
     }
     
     .food_items_card_template {
-        width: 422px;
-        height: 314px;
+        width: 326.66px;
+        height: 426px;
 
     }
 
@@ -206,8 +223,8 @@ export class menuItemComponent extends HTMLElement {
 
 
     .food_items_card_template {
-        width: 273.6px;
-        height: 368px;
+        width: 279.66px;
+        height: 404px;
     }
 
 
@@ -230,7 +247,7 @@ export class menuItemComponent extends HTMLElement {
     
         <div class="food_description_tile">
         <span class="food_name">${this.menuItem.name}</span>
-        <span class="food_description">${this.menuItem.description_ro}</span>
+        <span class="food_description">${description}</span>
         
         </div>
         <div class="footer">
@@ -244,7 +261,7 @@ export class menuItemComponent extends HTMLElement {
             <img src="icons/plus.svg" alt="">
         </button>
         <button class="add_item_to_cart">
-            <span>Adaugă</span>
+            <span>${addBtn}</span>
             <span>${this.menuItem.price} L</span>
         </button>
         </div>
