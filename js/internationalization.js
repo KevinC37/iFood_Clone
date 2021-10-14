@@ -94,7 +94,7 @@ function updateCategoriesLanguage() {
 
 
 function updateStaticElementsLang() {
-    const allItems = document.getElementsByClassName("category all")[0];
+    const allItems = document.getElementById("show_all");
  
    const ADDRESS = document.getElementById('header.address');
    const CART_BUTTON = document.getElementById('header.cartbutton');
