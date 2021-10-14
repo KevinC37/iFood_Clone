@@ -36,7 +36,7 @@ export class Categories extends HTMLElement {
 
         this.shadow.innerHTML = `
         <style>
-        
+
         button#category {
             height: 47px;
             padding: 0 16px 0 16px;

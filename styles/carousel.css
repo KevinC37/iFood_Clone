@@ -51,6 +51,7 @@
 }
 
 
+
 #categories_container button.category.all {
     color: #000;
     height: 43px;
@@ -58,12 +59,18 @@
     box-shadow: 0 2px 0 #ffcf33;
 }
 #categories_container button.category {
- 
+
+    color: #000;
+    height: 43px;
+
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 0 #e6e6e6;
     padding: 0 16px 0 16px;
     background-color: #ffffff;
     border-radius: 8px;
 
- 
+    color: #666;
     font-size: 1rem;
     font-weight: 500;
 }

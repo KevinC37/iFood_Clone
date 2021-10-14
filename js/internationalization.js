@@ -275,7 +275,7 @@ function updateStaticElementsLang() {
             }
         }
     } catch (e) {
-        console.log(e);
+      
     }
 }
 
