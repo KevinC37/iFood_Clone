@@ -105,3 +105,13 @@ document.getElementsByClassName("schedule")[0].addEventListener("click", () => {
     document.getElementsByClassName("schedule_box")[0].style.display = "none";
   }
 })
+
+let maps = document.getElementsByClassName("resturant_location")[0];
+let modal_maps = document.getElementsByClassName("background_maps")[0];
+maps.addEventListener("click", () => {
+  modal_maps.style.display = "flex";
+  modal_maps.style.zIndex = 3000; 
+  modal_maps.style.position = "fixed";
+  modal_maps.style.top = 50;
+  modal_maps.style.left = 50;
+})

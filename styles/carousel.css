@@ -1,11 +1,10 @@
 #categories_container {
     max-width: 1400px;
-
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    /* padding: 0 16px 0 16px; */
 
     overflow: scroll;
     scrollbar-width: none;

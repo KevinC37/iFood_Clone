@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/copyright.css" />
     <link rel="stylesheet" href="styles/cart.css" />
     <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/maps_modal.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +27,41 @@
     <!------------------------------------------------------------>
     <!-----------------------HEAD--------------------------------->
     <!------------------------------------------------------------>
+
+
+
     <div class="top_of_the_page">
+
+     <!------------- GOOGLE MAPS  ----------->
+     <div class="background_maps" style="display: none;">
+      <div class="map_container">
+      <iframe
+      id="google_maps"
+      width="640"
+      height="460"
+      style="border:0; border-radius: 8px 8px 0px 0px;"
+      loading="lazy"
+      allowfullscreen
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA6raVEENR4d8FLPEAjh06Np5-oHcLgjbQ
+        &q=Alecu Russo 2, Chișinău+Moldova">
+    </iframe>
+  
+    <div>
+        <div class="restaurant_maps_addresses">
+            <span class="maps_title">Filialele restaurantului </span>
+            <span class="map_address selected">Alecu Russo 2</span>
+            <span class="map_address">Calea Ieșilor 8</span>
+            <span class="map_address">Dacia 21/1 </span>
+            <span class="map_address">Ștefan cel Mare 134/1</span>
+            <span class="map_address">Arborilor 21</span>
+        </div>
+    </div>
+  </div>
+  </div>
+<!------------- END OF GOOGLE MAPS HTML  ----------->
+
+
+
       <div class="header_container">
         <img class="logo" src="icons/logo.svg" alt="iFood" />
 
@@ -87,6 +122,11 @@
     <!------------------------------------------------------------>
     <!-----------------------BODY--------------------------------->
     <!------------------------------------------------------------>
+
+
+
+
+
 
     <div class="information_about_restaurant">
       <div
@@ -375,6 +415,8 @@
       </div>
       </div>
     </div>
+
+   
 
     <script type="module" src="js/internationalization.js"></script>
     <script type="module" src="js/creatNewCartItem.js"></script>

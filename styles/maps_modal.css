@@ -1,0 +1,75 @@
+.map_container {
+    width: 640px;
+    min-height: 688px;
+
+
+
+    background-color: #ffffff;
+    border-radius: 8px;
+
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.16);
+}
+
+.maps_title {
+    font-size: 32px;
+    line-height: 42px;
+    color: #000;
+    font-weight: 700;
+    display: block;
+
+    text-align: center;
+}
+
+.restaurant_maps_addresses {
+
+    color: #333;
+    font-size: 14px;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: 20px 20px 40px 40px;
+
+    overflow: auto;
+
+   
+}
+
+.map_address {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.map_address.selected {
+    color: #19ac4b;
+    font-weight: 700;
+    
+}
+
+.background_maps {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background: rgba(0, 0, 0, 30%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .map_container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #google_maps {
+        width: 100vw;
+        height: 50vh;
+    }
+}
