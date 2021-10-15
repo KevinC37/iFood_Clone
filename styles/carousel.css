@@ -6,7 +6,7 @@
     justify-content: space-between;
 
 
-    overflow: scroll;
+    overflow: auto;
     scrollbar-width: none;
     cursor: pointer;
 
@@ -124,7 +124,7 @@ z-index: 1;
     display: grid;
     max-width: 1400px;
     height: 52px;
-    padding: 16px 0 24px 0px;
+    padding: 0px 0 24px 0px;
     margin: 0 auto;
     grid-template-columns: [arrow-right] 51px [categories_container] 1fr [arrow-left] 51px;
 

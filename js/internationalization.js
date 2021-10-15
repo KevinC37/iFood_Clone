@@ -95,20 +95,37 @@ function updateCategoriesLanguage() {
 
 function updateStaticElementsLang() {
     const allItems = document.getElementById("show_all");
+
+    const RESTAURANT_OBJ = document.getElementsByTagName("restaurant-info")[0].restaurant;
+    const TODAY = new Date().getDay();
+
+    // const WORK_DAYS_EN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // const WORK_DAYS_RO = ["Duminică", "Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"];
+    // const WORK_DAYS_RU = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    // const SCHEDULE_BOX = document.getElementsByClassName("schedule_box_element");
+    //    const SEARCH_PLACEHOLDER = document.getElementById('searchbar.placeholder');
+    //    const EMPTY_CART_BUTTON = document.getElementById('emptycart.button');
+    //    const EMPTY_CART__MODAL_TITLE = document.getElementById('emptycart.modal.title');
+
+   const RESTAURANT_NAME = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById("restaurant.name");
+   const RESTAURANT_DELIVERY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('restaurant.delivery');
+   const SCHEDULE_TODAY =  document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedule.today');
+   const PAYMENT_CARD = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('restaurant.payment.card');
+   const PAYMENT_CASH = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('restaurant.payment.cash');
+   const RESTAURANT_MAP = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('restaurant.map');
+   const RESTAURANT_DESCRIPTION = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('restaurant.description');
+   const PROMO_TITLE  = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('promo.title');
+   const PROMO_DESCRIPTION = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('promo.description');
+
+
  
    const ADDRESS = document.getElementById('header.address');
    const CART_BUTTON = document.getElementById('header.cartbutton');
-//    const SEARCH_PLACEHOLDER = document.getElementById('searchbar.placeholder');
-//    const EMPTY_CART_BUTTON = document.getElementById('emptycart.button');
-//    const EMPTY_CART__MODAL_TITLE = document.getElementById('emptycart.modal.title');
+
    const MODAL_DELIVERY = document.getElementById('cart_modal_delivery_name');
    const MODAL_TOTAL = document.getElementById('cart_modal_total_name');
    const MODAL_CONTINUE = document.getElementById('continue_to_checkout');
    const MODAL_ITEMS = document.getElementsByTagName("cart-item-component");
-   const RESTAURANT_DELIVERY = document.getElementById('restaurant.delivery');
-   const PAYMENT_CARD = document.getElementById('restaurant.payment.card');
-   const PAYMENT_CASH = document.getElementById('restaurant.payment.cash');
-   const RESTAURANT_MAP = document.getElementById('restaurant.map');
    const FOOTER_HELP_TITLE = document.getElementById('help.title');
    const FOOTER_HELP_DELIVERY = document.getElementById('help.delivery');
    const FOOTER_IFOOD_ABOUT = document.getElementById('ifood.about');
@@ -124,16 +141,26 @@ function updateStaticElementsLang() {
    const FOOTER_SUPPORT_EMAIL= document.getElementById('support.email');
    const SUBSCRIBE = document.getElementById('subscribe');
    const RIGHTS_RESERVED = document.getElementById('rights_reserved');
-   const SCHEDULE_MONDAY = document.getElementById('schedule.monday');
-   const SCHEDULE_TUESDAY = document.getElementById('schedule.tuesday');
-   const SCHEDULE_WEDNESDAY = document.getElementById('schedule.wednesday');
-   const SCHEDULE_THURSDAY = document.getElementById('schedule.thursday');
-   const SCHEDULE_FRIDAY  = document.getElementById('schedule.friday');
-   const SCHEDULE_SATURDAY = document.getElementById('schedule.saturday');
-   const SCHEDULE_SUNDAY = document.getElementById('schedule.sunday');
-   const RESTAURANT_DESCRIPTION = document.getElementById('restaurant.description');
-   const PROMO_TITLE  = document.getElementById('promo.title');
-   const PROMO_DESCRIPTION = document.getElementById('promo.description');
+
+   const MAPS_TITLE = document.getElementById("maps_title");
+   
+    const SEARCH_BAR = document.getElementById("searchbox");
+
+   const SCHEDULE_MONDAY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.monday');
+   const SCHEDULE_TUESDAY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.tuesday');
+   const SCHEDULE_WEDNESDAY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.wednesday');
+   const SCHEDULE_THURSDAY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.thursday');
+   const SCHEDULE_FRIDAY  = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.friday');
+   const SCHEDULE_SATURDAY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.saturday');
+   const SCHEDULE_SUNDAY = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById('schedulebox.sunday');
+
+//    const SCHEDULE_MONDAY = document.getElementById('schedule.monday');
+//    const SCHEDULE_TUESDAY = document.getElementById('schedule.tuesday');
+//    const SCHEDULE_WEDNESDAY = document.getElementById('schedule.wednesday');
+//    const SCHEDULE_THURSDAY = document.getElementById('schedule.thursday');
+//    const SCHEDULE_FRIDAY  = document.getElementById('schedule.friday');
+//    const SCHEDULE_SATURDAY = document.getElementById('schedule.saturday');
+//    const SCHEDULE_SUNDAY = document.getElementById('schedule.sunday');
 
 
     try {
@@ -141,6 +168,9 @@ function updateStaticElementsLang() {
             allItems.innerText = "Toate";
             ADDRESS.innerText = "strada Păcii 10";
             CART_BUTTON.innerText = "Coșul meu"
+
+
+            MAPS_TITLE.innerText = "Filialele restaurantului";
             // SEARCH_PLACEHOLDER.innerText = "Caută restaurante"
             // EMPTY_CART_BUTTON.innerText = "Coș gol"
             // EMPTY_CART__MODAL_TITLE.innerText = "Coșul tău este gol!"
@@ -166,6 +196,9 @@ function updateStaticElementsLang() {
             FOOTER_SUPPORT_EMAIL.innerText = "Email : support@ifood.md";
             SUBSCRIBE.innerText = "Abonează-te";
             RIGHTS_RESERVED.innerText = "Toate drepturile sunt rezervate.";
+
+            SCHEDULE_TODAY.innerText = RESTAURANT_OBJ.schedule_days_ro[TODAY];
+
             SCHEDULE_MONDAY.innerText = "Luni: ";
             SCHEDULE_TUESDAY.innerText = "Marți: ";
             SCHEDULE_WEDNESDAY.innerText = "Miercuri: ";
@@ -173,6 +206,10 @@ function updateStaticElementsLang() {
             SCHEDULE_FRIDAY.innerText = "Vineri: ";
             SCHEDULE_SATURDAY.innerText = "Sâmbătă: ";
             SCHEDULE_SUNDAY.innerText = "Duminică: ";
+
+            SEARCH_BAR.setAttribute("placeholder", "Caută restaurante");
+
+            RESTAURANT_NAME.innerText = RESTAURANT_OBJ.name_ro;
             RESTAURANT_DESCRIPTION.innerText = "Restaurantele McDonald's oferă produse 100% proaspete şi de calitate în orice loc şi în orice moment";
             PROMO_TITLE.innerText = "livrare gratuită";
             PROMO_DESCRIPTION.innerText = "Achită cu Mastercard de la 200 lei și primește livrare gratuită";
@@ -187,6 +224,8 @@ function updateStaticElementsLang() {
             allItems.innerText = "Все";
             ADDRESS.innerText = "Улица Pacii 10"
             CART_BUTTON.innerText = "Моя корзина"
+
+            MAPS_TITLE.innerText = "Филиалы ресторана ";
 
             // SEARCH_PLACEHOLDER.innerText = "Поиск ресторанов";
             // EMPTY_CART_BUTTON.innerText = "Корзина пуста";
@@ -213,6 +252,12 @@ function updateStaticElementsLang() {
             FOOTER_SUPPORT_EMAIL.innerText = "Эл. почта : support@ifood.md";
             SUBSCRIBE.innerText = "Подпишись";
             RIGHTS_RESERVED.innerText = "Все права защищены. ";
+
+            SCHEDULE_TODAY.innerText = RESTAURANT_OBJ.schedule_days_ru[TODAY];
+            SEARCH_BAR.setAttribute("placeholder", "Поиск ресторанов");
+
+
+
             SCHEDULE_MONDAY.innerText = "Понедельник: ";
             SCHEDULE_TUESDAY.innerText = "Вторник:";
             SCHEDULE_WEDNESDAY.innerText = "Среда:";
@@ -220,6 +265,9 @@ function updateStaticElementsLang() {
             SCHEDULE_FRIDAY.innerText = "Пятница:";
             SCHEDULE_SATURDAY.innerText = "Суббота:";
             SCHEDULE_SUNDAY.innerText = "Воскресенье:";
+
+
+            RESTAURANT_NAME.innerText = RESTAURANT_OBJ.name_ru;
             RESTAURANT_DESCRIPTION.innerText = "Рестораны McDonald's предлагают 100% свежие, высококачественные продукты в любое время и в любом месте";
             PROMO_TITLE.innerText = "бесплатная доставка";
             PROMO_DESCRIPTION.innerText = "Оплачивай с Mastercard от 200 лей и получи бесплатную доставку";
@@ -233,9 +281,10 @@ function updateStaticElementsLang() {
             allItems.innerText = "All";
             ADDRESS.innerText = "Pacii 10, street";
             CART_BUTTON.innerText = "My cart";
-            // SEARCH_PLACEHOLDER.innerText = "Find restaurants";
-            // EMPTY_CART_BUTTON.innerText = "Empty cart";
-            // EMPTY_CART__MODAL_TITLE.innerText = "Your cart is empty!";
+
+            MAPS_TITLE.innerText = "Restaurant branches";
+
+
             RESTAURANT_DELIVERY.innerText = "Delivery price: ";
             PAYMENT_CARD.innerText = "Card";
             PAYMENT_CASH.innerText = "Cash";
@@ -258,6 +307,13 @@ function updateStaticElementsLang() {
             FOOTER_SUPPORT_EMAIL.innerText = "Email: support@ifood.md";
             SUBSCRIBE.innerText = "Subscribe";
             RIGHTS_RESERVED.innerText = "All rights reserved.";
+
+            SEARCH_BAR.setAttribute("placeholder", "Find restaurants");
+
+
+            SCHEDULE_TODAY.innerText = RESTAURANT_OBJ.schedule_days_en[TODAY];
+
+
             SCHEDULE_MONDAY.innerText = "Monday: ";
             SCHEDULE_TUESDAY.innerText = "Tuesday: ";
             SCHEDULE_WEDNESDAY.innerText = "Wednesday: ";
@@ -265,6 +321,11 @@ function updateStaticElementsLang() {
             SCHEDULE_FRIDAY.innerText = "Friday: ";
             SCHEDULE_SATURDAY.innerText = "Saturday: ";
             SCHEDULE_SUNDAY.innerText = "Sunday: ";
+
+
+
+            RESTAURANT_NAME.innerText = RESTAURANT_OBJ.name_en;
+
             RESTAURANT_DESCRIPTION.innerText = "McDonald's restaurants offer 100% fresh, high-quality products anytime, anywhere";
             PROMO_TITLE.innerText = "free delivery";
             PROMO_DESCRIPTION.innerText = "Pay with Mastercard from 200 lei and get free delivery";

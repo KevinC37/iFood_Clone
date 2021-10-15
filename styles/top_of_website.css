@@ -35,9 +35,10 @@
 
 .header_elements {
     display: grid;
-    grid-auto-columns: min-content;
-    grid-template-areas: "search address language user cart";
+    grid-auto-columns: auto;
+    grid-template-areas: "search language user cart";
     grid-column-gap: 20px;
+
 
 
     align-items: center;
@@ -62,7 +63,8 @@
 
 .search_bar {
     grid-area: search;
-    justify-self: end;
+    margin: 0 auto;
+
 }
 
 .address_pointer {
@@ -365,9 +367,7 @@
         
     }
 
-    .cart {
-        width: 105px;
-    }
+
 
     
 }

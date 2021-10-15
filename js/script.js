@@ -97,16 +97,17 @@ let cart_body = document.getElementById("cart_modal_body");
   cart_footer.style.display = "";
 }
 
-
-document.getElementsByClassName("schedule")[0].addEventListener("click", () => {
-  if(document.getElementsByClassName("schedule_box")[0].style.display == "none") {
-    document.getElementsByClassName("schedule_box")[0].style.display = "flex"
-  } else if(document.getElementsByClassName("schedule_box")[0].style.display == "flex") {
-    document.getElementsByClassName("schedule_box")[0].style.display = "none";
+let scheduler_today = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById("schedule");
+let schedule_box = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById("schedule_box");
+scheduler_today.addEventListener("click", () => {
+  if(schedule_box.style.display == "none") {
+    schedule_box.style.display = "flex"
+  } else if(schedule_box.style.display == "flex") {
+    schedule_box.style.display = "none";
   }
 })
 
-let maps = document.getElementsByClassName("resturant_location")[0];
+let maps = document.getElementsByTagName("restaurant-info")[0].shadow.getElementById("restaurant.map").parentElement;
 let modal_maps = document.getElementsByClassName("background_maps")[0];
 
 maps.addEventListener("click", () => {
@@ -122,3 +123,5 @@ modal_maps.addEventListener("click", (e) => {
     modal_maps.style.display = "none";
   }
 })
+
+

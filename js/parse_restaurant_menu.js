@@ -10,6 +10,7 @@ import {
     Categories
 } from "./components/categories.js";
 
+import {RestaurantComponent} from "./components/restaurant_component.js"
 
 function addCategories(categories_ro, categories_ru, categories_en) {
   
@@ -27,14 +28,6 @@ function addCategories(categories_ro, categories_ru, categories_en) {
     }
 
 
-
-    // if (CURRENT_LANGUAGE == "ro") {
-    //     categories_ro.forEach(e => FOOD_CATEGORIES_HTML.appendChild(new Categories(e)));
-    // } else if (CURRENT_LANGUAGE == "ru") {
-    //     categories_ru.forEach(e => FOOD_CATEGORIES_HTML.appendChild(new Categories(e)));
-    // } else if (CURRENT_LANGUAGE == "en") {
-    //     categories_en.forEach(e => FOOD_CATEGORIES_HTML.appendChild(new Categories(e)));
-    // }
 
 }
 
@@ -100,5 +93,12 @@ export function pushRestaurantMenuToHTML(restaurantMenu) {
             loadScript(script_js_path),
             loadScript(internationalization_path)
         );
+
+}
+
+export function pushRestauranInformationToHTML(restaurantObject) {
+    let container = document.getElementsByClassName("information_about_restaurant")[0];
+
+    container.insertBefore(new RestaurantComponent(restaurantObject), container.firstChild);
 
 }

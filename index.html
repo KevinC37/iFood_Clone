@@ -48,7 +48,7 @@
   
     <div>
         <div class="restaurant_maps_addresses">
-            <span class="maps_title">Filialele restaurantului </span>
+            <span id="maps_title" class="maps_title">Filialele restaurantului </span>
             <span class="map_address selected">Alecu Russo 2</span>
             <span class="map_address">Calea Ieșilor 8</span>
             <span class="map_address">Dacia 21/1 </span>
@@ -65,22 +65,24 @@
       <div class="header_container">
         <img class="logo" src="icons/logo.svg" alt="iFood" />
 
-        <div class="header_elements">
-          <div class="search_bar">
+        <div class="search_bar">
           
 
-            <input
-              id="searchbox"
-              class="search_box"
-              type="text"
-       
-              placeholder= ""
-            />
-            <label class="search_icon" for="search_box">
-              <img class="" src="icons/search.svg" alt="Search" />
-            </label>
-          </div>
-          <div class="address_pointer">
+          <input
+            id="searchbox"
+            class="search_box"
+            type="text"
+     
+            placeholder= "Caută restaurante"
+          />
+          <label class="search_icon" for="search_box">
+            <img class="" src="icons/search.svg" alt="Search" />
+          </label>
+        </div>
+
+        <div class="header_elements">
+
+          <div class="address_pointer" style="display: none;">
             <div class="address">
               <label class="location_icon" for="address">
                 <img src="icons/location.svg" alt="    " />
@@ -129,116 +131,9 @@
 
 
     <div class="information_about_restaurant">
-      <div
-        class="banner"
-        style="
-          background-image: linear-gradient(
-              180deg,
-              rgba(0, 0, 0, 0) 0,
-              rgba(0, 0, 0, 0.8) 100%
-            ),
-            url(backgrounds/mcdonaldsbackground.webp);
-        "
-      >
-        <div class="restaurant_presentation">
-          <div class="restaurant_name">
-            <h3>McDonald's</h3>
-          </div>
-          <div class="restaurant_description">
-      
-              <span id="restaurant.description">Restaurantele McDonald's oferă produse 100% proaspete şi de
-                calitate în orice loc şi în orice moment</span> 
-        
-          </div>
-        </div>
-      </div>
-
-      <div class="additional_information">
-        <!---PRICE FOR SHIPPING-->
-        <div class="shipping">
-          <span id="restaurant.delivery">Prețul livrării: &nbsp;</span>
-          <span> &nbsp;29 MDL</span>
-        </div>
-        <!---RESTAURANT SCHEDULE--->
-        <div class="schedule">
-          <span id="schedule.wednesday" class="work_day">Miercuri</span>
-          <span class="work_hours">10:00 - 22:00</span>
-
-            <!--------------SCHEDULE BOX----------->
-        <div class="schedule_box" style="display: none;">
-          <div class="schedule_box_element">
-            <span id="schedule.monday">Luni: </span>
-            <span>10:00 - 22:00</span>
-          </div>
-
-          <div class="schedule_box_element">
-            <span id="schedule.tuesday">Marți: </span>
-            <span>10:00 - 22:00</span>
-          </div>
-
-          <div class="schedule_box_element">
-            <span id="schedule.wednesday">Miercuri: </span>
-            <span>10:00 - 22:00</span>
-          </div>
-
-          <div class="schedule_box_element">
-            <span id="schedule.thursday">Joi: </span>
-            <span>10:00 - 22:00</span>
-          </div>
-
-          <div class="schedule_box_element">
-            <span id="schedule.friday">Vineri: </span>
-            <span>10:00 - 22:45</span>
-          </div>
-
-          <div class="schedule_box_element">
-            <span id="schedule.saturday">Sâmbătă: </span>
-            <span>10:00 - 22:45</span>
-          </div>
-
-          <div class="schedule_box_element">
-            <span id="schedule.sunday">Duminică: </span>
-            <span>10:00 - 22:45</span>
-          </div>
-        </div>
-        </div>
-      
-
-
-        <!----CARD PAYMENT METHOD--->
-        <div class="payment_method_card">
-          <img src="icons/credit-card.svg" alt="Card" />
-          <span id="restaurant.payment.card">Card</span>
-        </div>
-        <!----CASH PAYMENT METHOD--->
-        <div class="payment_method_cash">
-          <img src="icons/cash.svg" alt="Cash" />
-          <span id="restaurant.payment.cash">Cash</span>
-        </div>
-
-        <!----RESTAURANT LOCATION--->
-        <div class="resturant_location">
-          <img src="icons/restaurant-page-location.svg" alt="" />
-          <span id="restaurant.map"  >Vezi pe hartă</span>
-        </div>
-      </div>
-
-      <!--Main body div start-->
+    </div>
       <div class="main_body">
-        <!------SPECIAL OFFER BANNER(S)-->
-        <div class="special_offer_container">
-          <div class="banner_promo">
-            <img src="icons/mastercard-banner-icon.svg" alt="" />
-            <div class="promo_info">
-              <span id="promo.title" class="promo_title">livrare gratuită</span>
-              <span id="promo.description" class="promo_description"
-                >Achită cu Mastercard de la 200 lei și primește livrare
-                gratuită</span
-              >
-            </div>
-          </div>
-        </div>
-
+    
         <!-----CATEGORIES FILTER------->
         <div id="carousel_container">
           <button
@@ -268,6 +163,8 @@
          
         </div>
       </div>
+    </div>
+  </div>
       <!--Main body div close-->
 
       <!-------------------------------------------------------------->
