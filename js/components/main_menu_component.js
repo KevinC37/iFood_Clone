@@ -50,6 +50,10 @@ export class menuItemComponent extends HTMLElement {
     box-shadow: 0 2px 5px rgba(0,0,0,.03),0 10px 15px rgba(0,0,0,.02),0 25px 80px rgba(0,0,0,.04);
 }
 
+.food_items_card_template:hover{
+    box-shadow: 0 2px 5px rgba(0,0,0,.03),0 10px 15px rgba(0,0,0,.02),0 25px 80px rgba(0,0,0,.1);
+}
+
 .food_description_tile {
     display: flex;
     flex-direction: column;
