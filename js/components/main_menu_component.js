@@ -237,7 +237,24 @@ export class menuItemComponent extends HTMLElement {
         max-width: 1000px;
     }
 }   
-        
+    @media only screen and (max-width: 1000px) {
+        .food_items_card_template {
+           width: auto;
+           padding: 8px;
+        }
+
+        .food_tile_counter_minus,
+        .food_tile_counter_plus,
+        .food_tile_counter {
+            display: none;
+        }
+
+        .add_item_to_cart {
+            width: 100%;
+        }
+    }
+
+
         </style>
         
         

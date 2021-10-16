@@ -544,3 +544,30 @@
 
  
 }
+
+@media only screen and (max-width: 1000px) {
+    .main_body #carousel_container,
+    #food_items_container {
+        max-width: 920px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+    }
+
+    #food_items_container {
+        grid-template-columns: repeat(2, auto);
+        grid-row-gap: 8px;
+        grid-column-gap: 8px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 650px)  {
+    #food_items_container {
+        grid-template-columns: 100%;
+        grid-row-gap: 8px;
+        grid-column-gap: 8px;
+    }
+}

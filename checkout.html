@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ro">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iFood Page Clone</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/checkout_styles/styles.css">
     <link rel="stylesheet" href="styles/top_of_website.css" />
     <link rel="stylesheet" href="styles/body_of_website.css" />
     <link rel="stylesheet" href="styles/footer.css" />
@@ -19,158 +19,158 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
- 
-
-  </head>
-
-  <body>
-    <!------------------------------------------------------------>
-    <!-----------------------HEAD--------------------------------->
-    <!------------------------------------------------------------>
-
-
+    <title>iFood Clone Checkout</title>
+</head>
+<body>
 
     <div class="top_of_the_page">
 
-     <!------------- GOOGLE MAPS  ----------->
-     <div class="background_maps" style="display: none;">
-      <div class="map_container">
-      <iframe
-      id="google_maps"
-      width="640"
-      height="460"
-      style="border:0; border-radius: 8px 8px 0px 0px;"
-      loading="lazy"
-      allowfullscreen
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA6raVEENR4d8FLPEAjh06Np5-oHcLgjbQ
-        &q=Alecu Russo 2, Chișinău+Moldova">
-    </iframe>
-  
-    <div>
-        <div class="restaurant_maps_addresses">
-            <span id="maps_title" class="maps_title">Filialele restaurantului </span>
-            <span class="map_address selected">Alecu Russo 2</span>
-            <span class="map_address">Calea Ieșilor 8</span>
-            <span class="map_address">Dacia 21/1 </span>
-            <span class="map_address">Ștefan cel Mare 134/1</span>
-            <span class="map_address">Arborilor 21</span>
-        </div>
-    </div>
-  </div>
-  </div>
-<!------------- END OF GOOGLE MAPS HTML  ----------->
-
-
-
-      <div class="header_container">
+   
+         <div class="header_container">
         <img src="icons/checkout/burger.svg" alt="" id="burger">
-       <a id="home" href="index.html"> <img class="logo" src="icons/logo.svg" alt="iFood" /></a>
 
-        <div class="search_bar">
-          
-
-          <input
-            id="searchbox"
-            class="search_box"
-            type="text"
-     
-            placeholder= "Caută restaurante"
-          />
-          <label class="search_icon" for="search_box">
-            <img class="" src="icons/search.svg" alt="Search" />
-          </label>
-        </div>
-
-        <div class="header_elements">
-
-          <div class="address_pointer" style="display: none;">
-            <div class="address">
-              <label class="location_icon" for="address">
-                <img src="icons/location.svg" alt="    " />
-              </label>
-              <span id="header.address" class="user_address"> strada Păcii 10 </span>
-            </div>
-          </div>
-
-          <select id="vanilla-i18n-toggler" class="language_pointer">
-            <option class="language">Ro</option>
-            <option class="language">Ru</option>
-            <option class="language">En</option>
-        </select>
-
-
-          <div style="display: none;" class="language_pointer">
-            <div class="language">
-              <label for="language"> RO </label>
-            </div>
-          </div>
-          <div class="user_pointer">
-            <a id="link_to_my_profile" href="/checkout.html">
-            <div class="user_profile">
-              <img src="icons/profile-icon.svg" alt="" />
-
-              <span class="user_name" class="user_name">Mihai</span>
-            </div>
-            </a>
-          </div>
-
-          <div id="cart_button" class="cart cart_is_empty">
-            <button>
-              <span id="cart_icon" alt=""></span>
-              <span id="cart_button_price">135 MDL</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!------------------------------------------------------------>
-    <!-----------------------BODY--------------------------------->
-    <!------------------------------------------------------------>
-
-
-
-
-
-
-    <div class="information_about_restaurant">
-    </div>
-      <div class="main_body">
+            <a  id="home" href="index.html"> <img class="logo" src="icons/logo.svg" alt="iFood" /></a>
+   
+           <div class="search_bar">
+             
+   
+             <input
+               id="searchbox"
+               class="search_box"
+               type="text"
+        
+               placeholder= "Caută restaurante"
+             />
+             <label class="search_icon" for="search_box">
+               <img class="" src="icons/search.svg" alt="Search" />
+             </label>
+           </div>
+   
+           <div class="header_elements">
+   
+             <div class="address_pointer" style="display: none;">
+               <div class="address">
+                 <label class="location_icon" for="address">
+                   <img src="icons/location.svg" alt="    " />
+                 </label>
+                 <span id="header.address" class="user_address"> strada Păcii 10 </span>
+               </div>
+             </div>
+   
+             <select id="vanilla-i18n-toggler" class="language_pointer">
+               <option class="language">Ro</option>
+               <option class="language">Ru</option>
+               <option class="language">En</option>
+           </select>
+   
+   
+             <div style="display: none;" class="language_pointer">
+               <div class="language">
+                 <label for="language"> RO </label>
+               </div>
+             </div>
+             <div class="user_pointer">
+                <a id="link_to_my_profile" href="/checkout.html">
+                <div class="user_profile">
+                  <img src="icons/profile-icon.svg" alt="" />
     
-        <!-----CATEGORIES FILTER------->
-        <div id="carousel_container">
-          <button
-            id="carousel_previousbtn"
-            class=""
-          >
-            <img  alt="R" src="icons/arrow-right.svg" />
-          </button>
-          <div id="categories_container">
-            <button id="show_all" class="category all">Toate</button>
+                  <span class="user_name" class="user_name">Mihai</span>
+                </div>
+                </a>
+              </div>
+   
+             <div id="cart_button" class="cart cart_is_empty">
+               <button>
+                 <span id="cart_icon" alt=""></span>
+                 <span id="cart_button_price">135 MDL</span>
+               </button>
+             </div>
+           </div>
+         </div>
+       </div>
+
+<div class="checkout_container">
+    <div class="navigation_container">
+        <div class="title"> <span>Account</span> </div>
+
+        <a class="checkout_tab active" href="/checkout.html">
+            <span class="profile_img">
+                <img src="icons/checkout/prof.svg" alt="">
+            </span>
+            <span class="tab_label">Developer's profile</span>
+        </a>
+
+        <a class="checkout_tab" href="/checkout/orders.html">
+            <span class="profile_img">
+                <img src="icons/checkout/order-history.svg" alt="">
+            </span>
+            <span class="tab_label">My orders</span>
+        </a>
 
 
-          </div>
-      
-          <button
-            id="carousel_nextbtn"
-            class="scroll_right"
-          >
-            <img alt="L" src="icons/arrow-left.svg" />
-          </button>
-      </div>
 
-
-      <!----------------FOOD ITEMS CONTAINER-->
-
-        <div id="food_items_container" class="food_items_container">
-         
-        </div>
-      </div>
     </div>
-  </div>
-      <!--Main body div close-->
+    <div class="content_container">
+        <div class="content_title">
+            <span>Developer's profile</span>
+        </div>
 
-      <!-------------------------------------------------------------->
+        <div class="myinfo">
+            <span>Personal data </span>
+        </div>
+
+        <div class="persdata_container">
+        <div class="personal_data">
+            <div class="title">
+                <span>Last Name</span>
+            </div>
+
+            <div class="info">
+                <span>Cujba</span>
+            </div>
+        </div>
+        
+        <div class="personal_data">
+            <div class="title">
+                <span>First Name</span>
+            </div>
+
+            <div class="info">
+                <span>Mihai</span>
+            </div>
+        </div>
+
+        <div class="personal_data">
+            <div class="title">
+                <span>E-mail</span>
+            </div>
+
+            <div class="info">
+                <span> <a href="mailto: m.cujba@yahoo.com">m.cujba@yahoo.com</a> </span>
+            </div>
+        </div>
+
+        <div class="personal_data">
+            <div class="title">
+                <span>Phone</span>
+            </div>
+
+            <div class="info">
+                <span><a href="tel: +37369385886">(+373) 69 385 886</a></span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <button class="contact_me">
+       <a href="https://github.com/KevinC37?tab=repositories" target="_blank">My github</a>
+    </button>
+
+    </div>
+</div>
+
+          <!-------------------------------------------------------------->
       <!-----------------------FOOTER START--------------------------->
       <!-------------------------------------------------------------->
 
@@ -220,7 +220,7 @@
           <!---------FOOTER ROW END--------->
 
           <!---------FOOTER ROW START--------->
-          <div class="footer_row">
+          <div id="support_footer" class="footer_row">
             <span  id="support.title" class="footer_row_title">Suport</span>
 
             <a id="support.phone" class="footer_row_links" href="#"
@@ -232,18 +232,25 @@
               <span>support@ifood.md</span>
             </a>
 
-            <div class="footer_row_links">
-              <a href="#"><img src="social_media/PlayMarket.svg" alt="" /></a>
-              <a href="#"><img src="social_media/AppStore.svg" alt="" /></a>
-            </div>
+            <div id="subscribe" class="footer_row_links">
+                <span class="footer_row_title">Abonează-te</span>
+                <div class="footer_row_links social_media">
+                  <a href="#"><img src="social_media/facebook.svg" alt="" /></a>
+                  <a href="#"><img src="social_media/instagram.svg" alt="" /></a>
+                  <a href="#"><img src="social_media/youtube.svg" alt="" /></a>
+                </div>
 
-            <span id="subscribe" class="footer_row_title">Abonează-te</span>
-            <div class="footer_row_links social_media">
-              <a href="#"><img src="social_media/facebook.svg" alt="" /></a>
-              <a href="#"><img src="social_media/instagram.svg" alt="" /></a>
-              <a href="#"><img src="social_media/youtube.svg" alt="" /></a>
-            </div>
+              <div id="download_app">
+                <div class="footer_row_links">
+                  <a href="#"><img src="social_media/PlayMarket.svg" alt="" /></a>
+                  <a href="#"><img src="social_media/AppStore.svg" alt="" /></a>
+                </div>
+
+
+
           </div>
+        </div>
+    </div>
           <!---------FOOTER ROW END--------->
         </div>
       </div>
@@ -316,17 +323,5 @@
       </div>
     </div>
 
-   
-
-    <script type="module" src="js/internationalization.js"></script>
-    <script type="module" src="js/creatNewCartItem.js"></script>
-    <script type="module" src="js/parse_restaurant_menu.js"></script>
-    <script  type="module" src="js/menu_API_to_html.js"></script>
-    <script type="text/javascript" src="js/cart.js"></script>
-    <script src="js/carousel.js"></script>
-
-    <script src="js/filterMenuItems.js"></script>
-
-
-  </body>
+</body>
 </html>

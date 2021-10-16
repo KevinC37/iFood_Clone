@@ -67,7 +67,6 @@ export class RestaurantComponent extends HTMLElement {
     
     .banner{
         width: 100vw;
-        margin-top: 91px;
         max-width: 100%;
         height: 200px;
         background-repeat: no-repeat;
@@ -394,11 +393,154 @@ export class RestaurantComponent extends HTMLElement {
   }
 
   .shipping {
-    max-width: 125px;
+   
   }
 
 }
 
+@media only screen and (max-width: 1000px) {
+  .restaurant_presentation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+  }
+
+  .restaurant_presentation {
+    height: max-content;
+
+  }
+
+  .banner {
+    width:auto;
+    margin: 0 auto;
+    height: max-content;
+    background-image: none !important;
+
+    padding-left: 20px;
+
+  }
+
+  .restaurant_name {
+    margin: 0;
+    justify-content: left;
+  }
+
+  .restaurant_description {
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 0px !important;
+  }
+
+
+  .restaurant_presentation h3 {
+
+    font-size: 20px;
+    line-height: 26px;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .restaurant_description span {
+    font-size: 12px;
+    line-height: 16px;
+    color: #555;
+  
+    word-wrap: break-word;
+    hyphens: auto;
+    padding-right: 20px;
+  }
+
+  .additional_information {
+    max-width: 920px;
+    height: unset;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .additional_information > div {
+    max-height: 46px;
+    padding: 0 10px 0 10px;
+  }
+
+  .shipping span,
+  #schedule span,
+  .payment_method_card span,
+  .payment_method_cash span,
+  .resturant_location span {
+    
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 600;
+    padding: 12px 10px;
+  }
+
+  .shipping span {
+    padding: 0;
+  }
+
+  .payment_method_card span,
+  .payment_method_cash span,
+  .resturant_location span {
+    padding: 0px 0px 0px 10px;
+  }
+
+  #schedule {
+    width: unset;
+    padding: 0;
+  }
+
+  .resturant_location {
+    max-height: 48px;
+    min-height: 48px;
+  }
+
+  .special_offer_container {
+    max-width: 920px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .banner_promo {
+    max-height: 65px;
+  }
+
+  .promo_title {
+    font-size: 14px;
+  }
+
+  .promo_description{
+    font-size: 12px;
+  }
+
+  .payment_method_card span, .payment_method_cash span {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 725px) {
+    .resturant_location {
+      display: none;
+    }
+    
+  @media only screen and (max-width: 560px) {
+    .payment_method_card,
+    .payment_method_cash {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .additional_information .shipping, 
+    #schedule span {
+      padding: 0px 5px 0px 5px !important;
+    }
+
+    .banner_promo {
+      width: unset;
+    }
+  }
+}
 
 
         </style>
