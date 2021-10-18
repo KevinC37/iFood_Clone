@@ -247,6 +247,10 @@ export class menuItemComponent extends HTMLElement {
            padding: 8px;
         }
 
+        #schedule_box .schedule_box_element {
+            padding: 0;
+        }
+
         .food_tile_counter_minus,
         .food_tile_counter_plus,
         .food_tile_counter {

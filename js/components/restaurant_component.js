@@ -518,16 +518,34 @@ export class RestaurantComponent extends HTMLElement {
     margin: 0;
   }
 
-  @media only screen and (max-width: 725px) {
+  // @media only screen and (max-width: 725px) {
+  //   .resturant_location {
+  //     display: none;
+  //   }
+  // }
+  // @media only screen and (max-width: 560px) {
+  //   .payment_method_card,
+  //   .payment_method_cash {
+  //     display: none;
+  //   }
+  // }
+
+  @media only screen and (max-width: 622px) {
     .resturant_location {
-      display: none;
+      // display: none;
+      margin-left: 10px;
+      flex-shrink: 0;
     }
-    
-  @media only screen and (max-width: 560px) {
-    .payment_method_card,
-    .payment_method_cash {
-      display: none;
+
+    .shipping,
+    #schedule {
+      flex-shrink: 0;
     }
+
+    .additional_information {
+      overflow: auto;
+    }
+
   }
 
   @media only screen and (max-width: 450px) {
