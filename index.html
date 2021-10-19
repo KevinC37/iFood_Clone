@@ -34,7 +34,10 @@
 
      <!------------- GOOGLE MAPS  ----------->
      <div class="background_maps" style="display: none;">
-      <div class="map_container">
+      <div id="map_container" class="map_container">
+        <div id="close_map_btn" class="close_map_container">
+          <img src="icons/close.svg" alt="">
+        </div>
       <iframe
       id="google_maps"
       width="640"
@@ -48,6 +51,7 @@
   
     <div>
         <div class="restaurant_maps_addresses">
+
             <span id="maps_title" class="maps_title">Filialele restaurantului </span>
             <span class="map_address selected">Alecu Russo 2</span>
             <span class="map_address">Calea Ieșilor 8</span>
@@ -318,7 +322,7 @@
 
    
 
-    <script type="module" src="js/internationalization.js"></script>
+    <script type="module" async src="js/internationalization.js"></script>
     <script type="module" src="js/creatNewCartItem.js"></script>
     <script type="module" src="js/parse_restaurant_menu.js"></script>
     <script  type="module" src="js/menu_API_to_html.js"></script>

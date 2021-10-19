@@ -118,8 +118,17 @@ export class itemComponent extends HTMLElement {
 
         (function emptyCart() {
             if(item_list_modal.length === 0) {
-                cartButtonTotal.innerHTML = "Coș gol"
+                let lang = document.getElementById("vanilla-i18n-toggler").value.toLowerCase();
+      
+                if(lang == "ro") {
+                    cartButtonTotal.innerHTML = "Coș gol"
+                } else if (lang == "ru") {
+                    cartButtonTotal.innerHTML = "Пустая корзина"
+                } else if (lang == "en") {
+                    cartButtonTotal.innerHTML = "Empty Cart"
+                }
                 cartButton.classList.add("cart_is_empty");
+
 
             } 
         })();
@@ -148,15 +157,44 @@ export class itemComponent extends HTMLElement {
         let cart_body = document.getElementById("cart_modal_body");
         let cart_modal_items = document.getElementById("all_cart_items");
 
+        const CART_ITEMS_LOCALSTORAGE = JSON.parse(globalThis.localStorage.getItem("cart-items"));
+        
+        /*-----------------------LOCAL STORAGE ON REMOVE ----------------------------------- */
 
+       // on remove -> updates cart items stored in local storage 
+        if(!!CART_ITEMS_LOCALSTORAGE) {
+            let arr = [];
+                    Object.values(CART_ITEMS_LOCALSTORAGE).map(e => {
+                        (e.name == this.menuItem.name) ? e.name : arr.push(e);
+ 
+                    })
+                    //clears the storage
+                    globalThis.localStorage.setItem("cart-items", ""); 
+
+                    //adds all cart items to localstorage except the item removed
+                    globalThis.localStorage.setItem("cart-items", JSON.stringify(arr)); 
+        }
+        /*-------------------------------------------------------------------------------- */
     
 
         if(item_list_modal.length === 0) {
             cart_body.appendChild(new emptyCart());
             cart_footer.style.display = "none";
             cart_modal_items.style.display = "none";
-            cartButtonTotal.innerHTML = "Coș gol"
-            cartButton.classList.add("cart_is_empty");
+            let lang = document.getElementById("vanilla-i18n-toggler").value.toLowerCase();
+
+   
+                if(lang == "ro") {
+                    cartButtonTotal.innerHTML = "Coș gol"
+                } else if (lang == "ru") {
+                    cartButtonTotal.innerHTML = "Пустая корзина"
+                } else if (lang == "en") {
+                    cartButtonTotal.innerHTML = "Empty Cart"
+                }
+    
+                cartButton.classList.add("cart_is_empty");
+
+
        } 
 
        (function calculateTotal() {
@@ -179,53 +217,6 @@ export class itemComponent extends HTMLElement {
     render() {
 
 
-        
-            let item_list_modal = document.getElementsByTagName("cart-item-component");
-            let counter = 1;
-     
-            for(let k in Object.entries(item_list_modal)) {
-                if(item_list_modal[k].menuItem === this.menuItem) {
-                   
-                   counter++;
-                }
-                let item = this.menuItem;
-                let arr = [];
-                if(counter > 2) {
-                
-                Object.keys(item_list_modal).map((key) => {
-                      if(item_list_modal[key].menuItem == item) {
-                        arr.push(item_list_modal[key]);
-    
-                      }
-                    
-                   })
-                   item_list_modal[k].remove();
-                   let previousCount = arr.pop().count;
-                   let cart_component_objects = Object.values(document.getElementsByTagName("cart-item-component"));
-    
-                   for(let k of Object.entries(cart_component_objects).map(e => e)) {
-                       if (k[1] === arr[0]) {
-                        
-                        let originalCount = cart_component_objects[k[0]].shadow.children[1].children[0].firstElementChild.children[0];
-                        let newCount = Number(originalCount.innerHTML) + Number(previousCount);
-                        k[1].count = newCount;   
-    
-                        let newPrice = Number(cart_component_objects[k[0]].count) * Number(cart_component_objects[k[0]].menuItem.price);
-                        let itemPriceUpdate = cart_component_objects[k[0]].shadow.children[1].children[0].firstElementChild.nextElementSibling.firstChild.data = newPrice + ",00 MDL";
-                        
-                        originalCount.innerHTML = newCount;
-    
-    
-                       }
-                   };
-      
-                  
-    
-                } 
-                
-            }
-        
-     
 
     const CURRENT_LANGUAGE = document.getElementsByClassName("language_pointer")[0].value.toLowerCase();
     let edit = "Editează"
@@ -255,7 +246,7 @@ export class itemComponent extends HTMLElement {
         
             justify-content: space-around;
             align-items: center;
-        
+            font-weight: 500;
         
         }
         

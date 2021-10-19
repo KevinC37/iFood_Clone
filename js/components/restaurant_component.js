@@ -378,12 +378,28 @@ export class RestaurantComponent extends HTMLElement {
   .payment_method_card,
   .payment_method_cash {
     margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .resturant_location {
+    margin-left: auto;
   }
   .special_offer_container,
   .additional_information{
     margin: 0 auto;
     max-width: 1000px;
 }
+
+#schedule_box {
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 260px;
+  width: -moz-available;
+}
+
+
 
   .restaurant_name,
   .restaurant_description {
@@ -456,7 +472,8 @@ export class RestaurantComponent extends HTMLElement {
     height: unset;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 265px;
+    margin-bottom: -245px;
   }
 
   .additional_information > div {
@@ -488,6 +505,25 @@ export class RestaurantComponent extends HTMLElement {
 
   #schedule {
     width: unset;
+    padding: 0;
+  }
+
+  #schedule_box {
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 125px;
+    min-width: 125px;
+    width: -moz-available;
+
+    justify-content: space-between;
+
+  }
+  div#schedule_box div.schedule_box_element{
+    padding: 0px 5px 16px 5px;
+  }
+
+  div#schedule_box div.schedule_box_element span {
     padding: 0;
   }
 
@@ -532,18 +568,26 @@ export class RestaurantComponent extends HTMLElement {
 
   @media only screen and (max-width: 622px) {
     .resturant_location {
-      // display: none;
       margin-left: 10px;
       flex-shrink: 0;
+    }
+
+    #schedule_box {
+      position: absolute;
+      top: 50px;
+      right: -1px;
     }
 
     .shipping,
     #schedule {
       flex-shrink: 0;
     }
-
-    .additional_information {
-      overflow: auto;
+    .additional_information{
+      overflow-x: auto;
+    }
+    .additional_information::-webkit-scrollbar ,
+    .additional_information::-webkit-scrollbar-thumb{
+      display: none;
     }
 
   }

@@ -222,8 +222,8 @@ function updateStaticElementsLang() {
 
         } else if(currentLanguage.value.toLowerCase() == "ru") {
             allItems.innerText = "Все";
-            ADDRESS.innerText = "Улица Pacii 10"
-            CART_BUTTON.innerText = "Моя корзина"
+            ADDRESS.innerText = "Улица Pacii 10";
+            CART_BUTTON.innerText = "Моя корзина";
 
             MAPS_TITLE.innerText = "Филиалы ресторана ";
 
@@ -336,7 +336,7 @@ function updateStaticElementsLang() {
             }
         }
     } catch (e) {
-      
+
     }
 }
 
@@ -347,8 +347,11 @@ currentLanguage.addEventListener("change", () => {
 
 });
 
-window.onload = function updateLang() {
+document.onload = (function updateLang() {
     updateFoodDescription();
-    updateStaticElementsLang();
-};
+
+    setTimeout(() => {
+        updateStaticElementsLang();
+    }, 500);
+})();
 

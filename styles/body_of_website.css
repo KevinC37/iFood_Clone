@@ -251,9 +251,13 @@
     padding-bottom: 24px;
     padding-top: 16px;
     
-    overflow: hidden;
+    overflow: auto;
     scrollbar-width: none;
     cursor: pointer;
+}
+
+#categories_container::-webkit-scrollbar {
+    display: none;
 }
 
 .categories_container button,

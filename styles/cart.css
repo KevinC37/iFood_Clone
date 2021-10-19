@@ -10,6 +10,8 @@
     position: relative;
 }
 
+
+
 .cart_modal_scroll_body {
     width: 378px;
     min-height: 83px;
@@ -133,13 +135,16 @@
 
     justify-content: space-around;
     align-items: center;
-
+   
 
 }
+
+
 
 .cart_modal_item_info {
     margin-right: auto;
 }
+
 
 .cart_modal_item {
     font-weight: 500;

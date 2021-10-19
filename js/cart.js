@@ -60,7 +60,17 @@ let calculateTotal = () => {
 
     if (currentTotal == Number.parseFloat(delivery_cost.innerHTML)) {
         totalPrice.innerText = `0,00 MDL`;
-        totalOnCartButton.innerText = `Coș gol`
+
+        let lang = document.getElementById("vanilla-i18n-toggler").value.toLowerCase();
+      
+        if(lang == "ro") {
+            totalOnCartButton.innerHTML = "Coș gol"
+        } else if (lang == "ru") {
+            totalOnCartButton.innerHTML = "Пустая корзина"
+        } else if (lang == "en") {
+            totalOnCartButton.innerHTML = "Empty Cart"
+        }
+
 
     } else {
         totalPrice.innerText = `${currentTotal},00 MDL`;

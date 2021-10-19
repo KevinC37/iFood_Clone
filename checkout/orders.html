@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="order">
+
+    </div>
+
+    <script>
+        let cart = JSON.parse(globalThis.localStorage.getItem("cart-item"));
+        for(let k in Object.values(cart)) {
+            document.getElementById("order").innerHTML += Object.values(cart)[k].name;
+        }
+    </script>
 </body>
 </html>
