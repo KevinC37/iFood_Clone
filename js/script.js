@@ -113,22 +113,26 @@ for (let index in Object.keys(food_tile_counter)) {
 
 
       
-      
-      for(let index in Object.values(localStorage)) {
-        if(Object.values(localStorage)[index].name == itemToAdd.name) {
-          let itemsCount = Number(item_list_modal[index].count);
-          itemsCount += Number(itemToAdd.count);
+      try {
+        for(let index in Object.values(localStorage)) {
+          if(Object.values(localStorage)[index].name == itemToAdd.name) {
+            let itemsCount = Number(item_list_modal[index].count);
+            itemsCount += Number(itemToAdd.count);
+    
+            Object.values(localStorage)[index].count = itemsCount;
+            item_list_modal[index].count = itemsCount;
+            item_list_modal[index].shadow.children[1].children[0].children[0].children[0].innerHTML = itemsCount;
+    
+            executed = false;
+      itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value );
   
-          Object.values(localStorage)[index].count = itemsCount;
-          item_list_modal[index].count = itemsCount;
-          item_list_modal[index].shadow.children[1].children[0].children[0].children[0].innerHTML = itemsCount;
-  
-          executed = false;
-    itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value );
-
-          return;
-        } 
-     }
+            return;
+          } 
+       }
+      } catch(e) {
+        console.log(e);
+      }
+    
     
 
     cartNotEmpty();
