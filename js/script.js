@@ -80,23 +80,39 @@ document.getElementById("continue_to_checkout").addEventListener("click", e => {
        }
     })();
   
-  
+    
   
   } catch(e) {
     console.log(e);
   }
 
+  function calculateTotal() {
+    let cartButtonTotal = document.getElementById("cart_button_price");
+    let cartModalTotal = document.getElementById("cart_modal_total_price");
+    let item_list_modal = document.getElementsByTagName("cart-item-component");
+    let deliveryCost = Number(document.getElementById("cart_modal_delivery_price").innerHTML.replace(/ MDL|,00 MDL/gi, ""));
+  
+    let total = 0;
+    for(let k of Object.values(item_list_modal)) {
+        total += k.menuItem.price * k.count;
+        cartButtonTotal.innerHTML = total + deliveryCost + " MDL";
+        cartModalTotal.innerHTML = total + deliveryCost + ",00 MDL"
+        k.shadow.getElementById("cart_modal_item_price").innerHTML = k.menuItem.price * k.count + ",00 MDL";
+    }
+};
+
 function cartItems() {
   let cartItems = {}
-
-      for(let k of document.getElementsByTagName("cart-item-component")) {
+  let item_list_modal = document.getElementsByTagName("cart-item-component");
+  
+      for(let k of item_list_modal) {
         cartItems[k.menuItem.name] = k.menuItem;
         cartItems[k.menuItem.name].count = k.count;
         globalThis.localStorage.setItem("cart-items", JSON.stringify(cartItems));
       }
 
-      let localStorage = JSON.parse(globalThis.localStorage.getItem("cart-items"));
-      console.log(cartItems);
+      calculateTotal();
+
 }
 
 
@@ -107,28 +123,28 @@ for (let index in Object.keys(food_tile_counter)) {
     let item_list_modal = document.getElementsByTagName("cart-item-component");
     let localStorage = JSON.parse(globalThis.localStorage.getItem("cart-items"));
 
-
-      let executed = true;
-  
-
-
+    let executed = true;
+    let addCount = document.getElementsByTagName("menu-item")[index].shadow.getElementById("food_tile_counter");
+            
       
       try {
         for(let index in Object.values(localStorage)) {
           if(Object.values(localStorage)[index].name == itemToAdd.name) {
             let itemsCount = Number(item_list_modal[index].count);
-            itemsCount += Number(itemToAdd.count);
+            let result = Number(itemsCount) + Number(addCount.value);
     
-            Object.values(localStorage)[index].count = itemsCount;
-            item_list_modal[index].count = itemsCount;
-            item_list_modal[index].shadow.children[1].children[0].children[0].children[0].innerHTML = itemsCount;
+            Object.values(localStorage)[index].count = result;
+            item_list_modal[index].count = result;
+            item_list_modal[index].shadow.children[1].children[0].children[0].children[0].innerHTML = result;
     
             executed = false;
-      itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value );
-  
+            itemAddedPopupWindow( cartButton , itemToAdd, food_tile_counter[index].shadow.lastElementChild.lastElementChild.children[1].children[1].value );
+            cartItems();
+
             return;
           } 
        }
+       
       } catch(e) {
         console.log(e);
       }

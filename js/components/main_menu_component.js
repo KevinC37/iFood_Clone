@@ -281,7 +281,7 @@ export class menuItemComponent extends HTMLElement {
         <button class="food_tile_counter_minus">
             <img src="icons/minus.svg" alt="">
         </button>
-        <input type="number" class="food_tile_counter" name="food_tile_counter" step="1" min="1" max="10" value="1" readonly="">
+        <input type="number" id="food_tile_counter" class="food_tile_counter" name="food_tile_counter" step="1" min="1" max="10" value="1" readonly="">
         <button class="food_tile_counter_plus">
             <img src="icons/plus.svg" alt="">
         </button>

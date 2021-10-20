@@ -52,10 +52,10 @@
 
 .cart_modal_container {
 
-    width: 355px;
+    width: auto;
     min-height: 286px;
     max-height: calc(100vh - 130px);
-    padding: 26px 45px 45px 45px;
+    padding: 26px 0px 45px 45px;
 
     background-color: white;
     box-shadow: 0 4px 36px rgba(64, 85, 128, .08);
@@ -76,9 +76,9 @@
 }
 
 .cart_modal_header {
-    max-width: 355px;
+    max-width: 100%;
     height: 42px;
-
+    margin-right: 40px;
     display: flex;
 
     justify-content: space-between;
@@ -198,7 +198,7 @@
 
 
 .cart_modal_footer {
-    width: 355px;
+  
     height: 127px;
 
     border-top: 1px solid #e5e5e5;

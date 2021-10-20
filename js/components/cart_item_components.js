@@ -37,6 +37,9 @@ export class emptyCart extends HTMLElement {
     justify-content: center;
 }
 
+#empty_cart_container {
+    margin-right: 45px;
+}
 
 .cart_empty_title {
     font-weight: 700;
@@ -314,7 +317,7 @@ export class itemComponent extends HTMLElement {
                             <sup>x</sup>
                             <span class="cart_modal_item_name">${this.menuItem.name}</span>
                         </div>
-                        <span class="cart_modal_item_price">${this.menuItem.price * this.count},00 MDL</span>
+                        <span id="cart_modal_item_price" class="cart_modal_item_price">${this.menuItem.price * this.count},00 MDL</span>
                     </div>
         
                     <div class="cart_modal_edit_delete">
