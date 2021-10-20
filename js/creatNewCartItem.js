@@ -47,6 +47,7 @@ export async function creatNewCartItem(HTMLContainer, menuItem, count) {
 
 
 
+
             let increment = edit.shadow.getElementById("increment");
             let decrement = edit.shadow.getElementById("decrement");
             let currentCount = edit.shadow.getElementById("count");
@@ -87,9 +88,25 @@ export async function creatNewCartItem(HTMLContainer, menuItem, count) {
 
                 //update total price for edited item
                 menuItemsCart[i].shadow.children[1].children[0].children[0].nextElementSibling.innerHTML = updatePrice().replace(/ L/gi, ",00 MDL");
-
-
-
+                
+                let local = JSON.parse(globalThis.localStorage.getItem("cart-items"));
+                
+                let obj = {};
+            
+                for(let k of Object.values(local)) {
+                    
+                    if(menuItemsCart[i].menuItem.name == k.name) {
+                        menuItemsCart[i].menuItem.count = currentCount.innerHTML;
+                        local[k.name].count = currentCount.innerHTML;
+                        obj[k.name] = k;
+                        console.log(obj);
+                    } else {
+                        obj[k.name] = k;
+                    }
+                }
+               
+                globalThis.localStorage.setItem("cart-items", JSON.stringify(obj));
+ 
                 updateTotalPrice();
                 for (let k of Object.values(editModalBody)) {
                     k.remove();

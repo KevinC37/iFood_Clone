@@ -14,6 +14,7 @@ export class emptyCart extends HTMLElement {
         let heading = "Coșul tău este gol!";
         let message = "Adaugă produse în coș pentru a continua cumpărăturile."
 
+
         if(document.getElementById("vanilla-i18n-toggler").value.toLowerCase() == "ru") {
             heading = "Ваша корзина пуста!";
             message = "Добавьте товары в корзину, чтобы продолжить покупки."
@@ -22,6 +23,9 @@ export class emptyCart extends HTMLElement {
             message = "Add products to cart to continue shopping."
         }
 
+        let cart = document.getElementById("cart_modal_container");
+        cart.setAttribute("style", "max-width: 355px");
+        
 
         this.shadow.innerHTML = 
 `
@@ -144,6 +148,9 @@ export class itemComponent extends HTMLElement {
 
     removeItem() {
         this.remove();
+
+
+
         let cartButton = document.getElementById("cart_button");
 
         //input to be updated in DOM
@@ -219,7 +226,8 @@ export class itemComponent extends HTMLElement {
 
     render() {
 
-
+        let cart = document.getElementById("cart_modal_container");
+        cart.setAttribute("style", "max-width: none");
 
     const CURRENT_LANGUAGE = document.getElementsByClassName("language_pointer")[0].value.toLowerCase();
     let edit = "Editează"

@@ -70,11 +70,9 @@ document.getElementById("continue_to_checkout").addEventListener("click", e => {
     window.location.pathname = "checkout/orders.html"
   })
   try{
-  
-    // let orderItems = JSON.parse(globalThis.localStorage.getItem("cart-items"));
-    window.onload = (function loadCartOnRefresh() {
+      window.onload = (function loadCartOnRefresh() {
     let orderItems = JSON.parse(globalThis.localStorage.getItem("cart-items"));
-      // console.log(orderItems);
+
       for(let k in orderItems) {
         creatNewCartItem(cart_modal_items, orderItems[k], orderItems[k].count);
        }
@@ -167,15 +165,6 @@ for (let index in Object.keys(food_tile_counter)) {
   })
 
 }
-
-
-//JSON.parse(globalThis.localStorage.getItem("cart-items")); 
-
-
-
-
-
-
 
 
 /*------------------------------------------------------------------------------------------------------

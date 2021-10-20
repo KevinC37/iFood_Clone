@@ -28,7 +28,7 @@ export class editCart extends HTMLElement {
             itemDescription = this.menuItem.description_en;
         }
 
-        console.log(`Item description: ${itemDescription}`)
+
 
         this.shadow.innerHTML = ` 
         <style>
